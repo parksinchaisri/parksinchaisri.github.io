@@ -29,6 +29,90 @@
     <link rel="stylesheet" href="./files/css/academicons.min.css"/>
     <link href="./files/css/all.css" rel="stylesheet">
 
+    <style>
+    .team-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .team-member {
+    flex: 0 0 calc(25% - 20px);
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-member .circle-img {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1; /* Generic silhouette color */
+  }
+
+  .team-member img {
+    width: 100%; /* Adjusted width to fill the circle */
+    height: 100%;
+    max-width: 100%; /* Ensure the image fits within the circle */
+    max-height: 100%; /* Ensure the image fits within the circle */
+    object-fit: cover; /* Maintain aspect ratio and cover the circle */
+    border-radius: 50%;
+  }
+
+  .team-member {
+    flex: 0 0 calc(25% - 20px);
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center align vertically */
+  }
+
+  .team-member .tags {
+    display: flex;
+    flex-wrap: wrap; /* Added to allow tags to wrap */
+    justify-content: center;
+    gap: 5px;
+    margin-top: 5px;
+  }
+
+  .tag {
+    padding: 3px 8px; /* Smaller padding */
+    border-radius: 15px; /* Smaller border-radius */
+    font-size: 10px; /* Smaller font size */
+    color: white;
+  }
+
+  .tag.ug {
+    background-color: #34495e; /* Dark grayish blue */
+  }
+
+  .tag.hai {
+    background-color: #e67e22; /* Dark orange */
+  }
+
+  .tag.gig {
+    background-color: #27ae60; /* Dark green */
+  }
+
+  .tag.phd {
+    background-color: #8e44ad; /* Dark purple */
+  }
+
+  .tag.lead {
+    background-color: #c0392b; /* Dark red */
+  }
+}
+</style>
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -47,6 +131,7 @@
             <li><a href="#home">About</a></li>
             <li><a href="#news">News</a></li>
             <li><a href="#portfolio">Research</a></li>
+            <li><a href="#bobalab">BOBALAB</a></li>
             <li><a href="#teaching">Teaching</a></li>
             <li><a href="#timeline">Timeline</a></li>
           </ul>
@@ -65,9 +150,9 @@
   <i class="far fa-calendar"></i> <a href="https://pomsmeetings.org/conf-2023/" target="_blank">POMS</a> Improving Human DM w/ ML
   <i class="far fa-calendar"></i> <a href="https://pomsmeetings.org/conf-2023/" target="_blank">POMS</a> Structural Estimation
   <i class="far fa-calendar"></i> <a href="https://www.mcgill.ca/msom2023/program-0/sig-program" target="_blank">SIG</a> Managing Multihoming
-  <i class="far fa-calendar"></i> <a href="https://www.mcgill.ca/msom2023/" target="_blank">MSOM</a> Sequential Human-AI
+  <i class="far fa-calendar"></i> <a href="https://www.conftool.com/msom2023/index.php?page=browseSessions&print=export&ismobile=false&form_session=48&mode=list&presentations=hide" target="_blank">MSOM</a> Sequential Human-AI
   <i class="far fa-calendar"></i> <a href="https://meetings.informs.org/wordpress/healthcare2023/" target="_blank">Healthcare</a> Human-AI Interface
-  <i class="far fa-calendar"></i> <a href="https://meetings.informs.org/wordpress/phoenix2023/" target="_blank">INFORMS</a> Managing Multihoming
+  <i class="far fa-calendar"></i> <a href="https://meetings.informs.org/wordpress/phoenix2023/" target="_blank">INFORMS</a> Sequential Human-AI
   <i class="far fa-calendar"></i> <a href="https://meetings.informs.org/wordpress/phoenix2023/" target="_blank">INFORMS</a> Gig Worker Learning
   <i class="far fa-calendar"></i> More to come<span class="blinking"></span>
 <!--span class="prompt">Summer-Fall 2022/</span>Talks
@@ -120,9 +205,9 @@
           </p><br>
           </div>
 
-          <p class="lead">I am an Assistant Professor of <a class="hidelink" target="_blank" href="https://haas.berkeley.edu/oitm/">Operations and Information Technology Management</a> at UC Berkeley <a class="hidelink" target="_blank" href="https://haas.berkeley.edu">Haas School of Business</a>. My official website is <a class="hidelink" target="_blank" href="https://haas.berkeley.edu/faculty/park-sinchaisri/">here</a>. In Fall 2023, I will be teaching <a class="hidelink" target="_blank" href="https://ewmba.haas.berkeley.edu/academics/curriculum">EWMBA 204: Operations</a> <small><a class="hidelink" target="_blank" href="files/syllabus-ewmba204.pdf"><i class="far fa-sticky-note"></i></a></small>. I taught <a class="hidelink" target="_blank" href="https://classes.berkeley.edu/content/2022-fall-ugba-141-001-lec-001">UGBA 141: Production & Operations Management</a> <small><a class="hidelink" target="_blank" href="files/syllabus-ugba141.pdf"><i class="far fa-sticky-note"></i></a></small> in Spring and Fall 2022, and will be offering this class again in Fall 2024.
+          <p class="lead">I am an Assistant Professor of <a class="hidelink" target="_blank" href="https://haas.berkeley.edu/oitm/">Operations and Information Technology Management</a> at UC Berkeley <a class="hidelink" target="_blank" href="https://haas.berkeley.edu">Haas School of Business</a>. My official website is <a class="hidelink" target="_blank" href="https://haas.berkeley.edu/faculty/park-sinchaisri/">here</a>. In Fall 2023, I will be teaching <a class="hidelink" target="_blank" href="https://ewmba.haas.berkeley.edu/academics/curriculum">EWMBA 204: Operations</a> <small><a class="hidelink" target="_blank" href="files/syllabus-ewmba204.pdf"><i class="far fa-sticky-note"></i></a></small>. I taught <a class="hidelink" target="_blank" href="https://classes.berkeley.edu/content/2022-fall-ugba-141-001-lec-001">UGBA 141: Production & Operations Management</a> <small><a class="hidelink" target="_blank" href="files/syllabus-ugba141.pdf"><i class="far fa-sticky-note"></i></a></small> in Spring and Fall 2022.
             <br><br>
-            My primary research interests are in the design and analysis of data-driven and human-centric solutions to problems in operations management, currently focusing on the <a href="#gigdrivers">gig economy</a> <small><em>("How do workers decide their flexible schedule?")</em></small>, <a href="#markdown">dynamic pricing</a> <small><em>("How to price when it affects quality perception?")</em></small>, <a href="#tips">human-AI interfaces</a> <small><em>("Can ML offer simple tips to help humans?")</em></small>, and <a href="#blockparty">urban analytics</a> <small><em>("Are more social neighborhoods safer?")</em></small>.
+            My primary research interests are in the design and analysis of data-driven and human-centric solutions to problems in operations management, currently focusing on the <a href="#gigdrivers">future of work</a> <small><em>("How do workers decide their flexible schedule?")</em></small>, <a href="#markdown">dynamic pricing</a> <small><em>("How to price when it affects quality perception?")</em></small>, <a href="#tips">human-AI interfaces</a> <small><em>("Can ML offer simple tips to help humans?")</em></small>, and <a href="#blockparty">urban analytics</a> <small><em>("Are more social neighborhoods safer?")</em></small>. My research group, <a href="#bobalab">Berkeley Operations and Behavioral Analytics Lab (<em>BOBALAB</em>)</a>, is currently recruiting undergraduate/graduate research assistants through <a href="https://research.berkeley.edu/urap/application/" class="hidelink" target="_blank">Berkeley's URAP program</a> and <a href="https://bit.ly/45sjUZw" class="hidelink" target="_blank">here</a>.
             <br><br>
             I received my PhD in <a href="https://oid.wharton.upenn.edu/" target="_blank">Operations, Information, and Decisions</a> and AM in Statistics from <a class="hidelink" target="_blank" href="https://wharton.upenn.edu">The Wharton School</a> at the University of Pennsylvania, where I was also a <a href="https://socialimpact.wharton.upenn.edu/programs/wise-fellowship/" target="_blank">Wharton Social Impact Fellow</a>, my SM in <a class="hidelink" target="_blank" href="https://cse.mit.edu/programs/sm/">Computational Science and Engineering</a> from <a class="hidelink" target="_blank" href="https://www.mit.edu">MIT</a>, and my ScB in Computer Engineering and Applied Mathematics-Economics from <a class="hidelink" target="_blank" href="https://www.brown.edu">Brown University</a>. I had also worked at Oracle, Goldman Sachs, and Deloitte Consulting. Growing up in Bangkok, I am a world traveller, avid foodie, and design/cities enthusiast.
           </p>
@@ -268,9 +353,10 @@
                 <li class=""><a href="#structural">- Manage Multihoming Workers</a></li>
                 <!--li class=""><a href="#nonadoption">- Tip Non-Adoption</a></li-->
                 <li class=""><a href="#workinprogress">Work in Progress</a></li>
-                <li class=""><a href="#driving">- Human-AI for Customers</a></li>
+                <li class=""><a href="#driving">- AI for Sequential DM</a></li>
                 <li class=""><a href="#staffing">- Staffing Signaling Quality</a></li>
-                <li class=""><a href="#telehealth">- Scheduling in Gig Economy</a></li>
+                <!--li class=""><a href="#telehealth">- Scheduling in Gig Economy</a></li-->
+                <li class=""><a href="#bobalab">BOBALAB</a></li>
               <li class=""><a href="#otherworks">Other Works</a></li>
             <li class=""><a href="#impact">- Social Impact in Practice</a></li>
           <li class=""><a href="#peopleanalytics">- People Analytics</a></li>
@@ -439,8 +525,19 @@ abstract</a>
           <h3>Work in Progress</h3>
 <br>
 <a class="anchor" id="driving"></a>
-<h4>Human-Centered AI for Improving Customer Experience</h4>
-with <a class="hidelink" target="_blank" href="https://pblaettchen.com/">Philippe Blaettchen</a><br>
+<h4>Human-Centered AI for Sequential Decision-Making</h4>
+with <a class="hidelink" target="_blank" href="https://pblaettchen.com/">Philippe Blaettchen</a>
+<p class="mb-0"><i class="fas fa-award"></i><a class="lowkey"> Berkeley AI Research Commons Grant, 2021</a><br>
+<i class="fas fa-award"></i><a class="lowkey"> Center for Growth Markets Research Grant, 2022</a></p>
+<a class="btn btn-default" data-toggle="collapse" href="#abstractev" role="button" aria-expanded="false" aria-controls="collapseExample">
+abstract
+</a>
+</p>
+<div class="collapse" id="abstractev">
+<div class="card card-body">
+<blockquote class="blockquote">
+We develop a sequential decision-making task in the form of a virtual electric vehicle driving game in which the participant needs to make sequential charging decisions when facing uncertain traffic and receiving machine-generated recommendations on their strategy. Our experimental results offer key insights into how humans make decisions and respond to those recommendations, allowing us to design a better human-centric recommendation system.</blockquote></div>
+</div>
 <br>
 
 <a class="anchor" id="staffing"></a>
@@ -459,10 +556,170 @@ From behavioral viewpoint, longer queue can signal high quality/low prices of th
 </div>
 <br>
 
-<a class="anchor" id="telehealth"></a>
+<!--a class="anchor" id="telehealth"></a>
 <h4>Scheduling Customers and Resources in the On-Demand Economy</h4>
 with <a class="hidelink" target="_blank" href="https://oid.wharton.upenn.edu/profile/gadallon/">Gad Allon</a> and <a class="hidelink" target="_blank" href="https://oid.wharton.upenn.edu/profile/terwiesc/">Christian Terwiesch</a><br>
-<p class="mb-0"><i class="fas fa-award"></i><a class="lowkey"> Mack Institute Research Fellowship, 2020</a></p>
+<p class="mb-0"><i class="fas fa-award"></i><a class="lowkey"> Mack Institute Research Fellowship, 2020</a></p-->
+          <hr>
+
+
+          <a class="anchor" id="bobalab"></a>
+          <h3>Berkeley Operations & Behavioral Analytics (BOBALAB)</h3>
+<br>
+
+<p>We are currently recruiting undergraduate/graduate research assistants for several projects on <a href="https://urapprojects.berkeley.edu/detail.php?id=20184-1" class="hidelink" target="_blank">human-AI interfaces in operations management</a> and <a href="https://urapprojects.berkeley.edu/detail.php?id=20184-4" class="hidelink" target="_blank">the future of work</a> through <a href="https://research.berkeley.edu/urap/application/" class="hidelink" target="_blank">Berkeley's URAP program</a> and <a href="https://bit.ly/45sjUZw" class="hidelink" target="_blank">here</a>.</p>
+<br>
+
+
+<h4>Current Students</h4>
+<div class="team-section">
+
+  <div class="team-member">
+    <div class="circle-img"><img src="https://media.licdn.com/dms/image/C4E03AQGFib0vIxXTVA/profile-displayphoto-shrink_200_200/0/1641411802208?e=1697068800&v=beta&t=M4UhUk7yig831XMFg96Oh1itaxkXfy_dFTXBvCeGC0U"></div>
+    <p>Kristin Chen
+      <span class="tags">
+      <span class="tag ug">data sci '25</span>
+      <span class="tag gig">future of work</span>
+      <span class="tag lead">team lead</span>
+    </span></p>
+  </div>
+
+  <div class="team-member">
+    <div class="circle-img"></div>
+    <p>Brandon Chin
+      <span class="tags">
+      <span class="tag ug">eecs '25</span>
+      <span class="tag hai">human-ai</span>
+      <span class="tag lead">team lead</span>
+    </span></p>
+  </div>
+
+  <div class="team-member">
+    <div class="circle-img"><img src="https://media.licdn.com/dms/image/D5603AQHUyRXkVb6MCw/profile-displayphoto-shrink_800_800/0/1668470479115?e=1697673600&v=beta&t=9hny9OxfM1jghAtW2abDued01kOexCd0D1_YX2au8O0"></div>
+    <p>Camille Dang
+      <span class="tags">
+      <span class="tag ug">eecs '26</span>
+      <span class="tag hai">human-ai</span>
+    </span></p>
+  </div>
+
+  <div class="team-member">
+    <div class="circle-img"><img src="https://ds100.org/su22/resources/assets/staff_pics/Nei_Fang.jpg"></div>
+    <p>Nei (Alex) Fang
+      <span class="tags">
+      <span class="tag ug">data sci '25</span>
+      <span class="tag hai">human-ai</span>
+    </span></p>
+  </div>
+
+  <div class="team-member">
+    <div class="circle-img"><img src="https://shunanjiang.github.io/images/WechatIMG7647.jpeg"></div>
+     <p><a class="hidelink" target="_blank" href="https://shunanjiang.github.io/">Shunan Jiang</a>
+       <span class="tags">
+        <span class="tag phd">ieor phd '25</span>
+        <span class="tag gig">future of work</span>
+      </span></p>
+   </div>
+
+   <div class="team-member">
+     <div class="circle-img"><img src="https://media.licdn.com/dms/image/C5603AQHgnCKfEMUkGQ/profile-displayphoto-shrink_400_400/0/1663005673922?e=1697673600&v=beta&t=3I6j-c0ukfvtdtBZ94D1yaGr5pR433k8sNf80OxHGYY"></div>
+     <p>Na Hyun Kim
+       <span class="tags">
+       <span class="tag ug">bba '24 (snu)</span>
+       <span class="tag gig">future of work</span>
+       <span class="tag lead">team lead</span>
+     </span></p>
+   </div>
+
+
+   <div class="team-member">
+     <div class="circle-img"></div>
+     <p>Edward Lee
+       <span class="tags">
+       <span class="tag ug">eecs '25</span>
+       <span class="tag hai">human-ai</span>
+     </span></p>
+   </div>
+
+      <div class="team-member">
+        <div class="circle-img"><img src="https://media.licdn.com/dms/image/D5603AQGOb868A3asGw/profile-displayphoto-shrink_800_800/0/1666153699890?e=1697673600&v=beta&t=dx6koNDqZI62ypWCSKIN1myl2nyptILyHi58OwY4drg"></div>
+        <p><a class="hidelink" target="_blank" href="https://www.matthewlee.xyz/">Matthew Lee</a>
+          <span class="tags">
+          <span class="tag ug">cs/ds '24</span>
+          <span class="tag hai">human-ai</span>
+          <span class="tag lead">team lead</span>
+        </span></p>
+      </div>
+
+   <div class="team-member">
+     <div class="circle-img"><img src="https://media.licdn.com/dms/image/D5603AQE2RgzPkUB1uQ/profile-displayphoto-shrink_800_800/0/1691610988400?e=1697673600&v=beta&t=hQmUiC5o7WrTI-J2NJ3kDf4Nhs96SqpX8aWzUA3wKJw"></div>
+     <p>Anish Sasanur
+       <span class="tags">
+       <span class="tag ug">eecs '26</span>
+       <span class="tag hai">human-ai</span>
+     </span></p>
+   </div>
+
+   <div class="team-member">
+     <div class="circle-img"><img src="https://media.licdn.com/dms/image/C5603AQEF8CL0pYO7aw/profile-displayphoto-shrink_800_800/0/1596745169966?e=2147483647&v=beta&t=RME26EWNiWoPy2M4p-lzkVTU4IYjKBTepz7G0kDKKOM"></div>
+     <p>Sahityasree Subramanian
+       <span class="tags">
+       <span class="tag ug">eecs '25</span>
+       <span class="tag hai">human-ai</span>
+     </span></p>
+   </div>
+
+   <div class="team-member">
+     <div class="circle-img"><img src="https://www.ocf.berkeley.edu/~tbp/tbpweb/media/user_profiles/estseng.jpg.150x150_q90_autocrop_crop-smart.jpg"></div>
+     <p>Enoch Tseng
+       <span class="tags">
+       <span class="tag ug">eecs '25</span>
+       <span class="tag gig">future of work</span>
+     </span></p>
+   </div>
+
+   <div class="team-member">
+     <div class="circle-img"><img src="https://research.berkeley.edu/wp-content/uploads/2023/05/Zhu.Austin-Austin-Zhu-400x400.jpg"></div>
+     <p>Austin Zhu
+       <span class="tags">
+       <span class="tag ug">econ '25</span>
+       <span class="tag gig">future of work</span>
+       <span class="tag lead">team lead</span>
+     </span></p>
+   </div>
+
+
+   <div class="team-member">
+     <div class="circle-img"><img src="https://media.licdn.com/dms/image/C4D03AQFxuq7TVQB-Ug/profile-displayphoto-shrink_800_800/0/1573765617254?e=2147483647&v=beta&t=FSOT8PKMa33n3nbp-8FA_CcVv9xEesghgZA6T3HPsq0"></div>
+     <p>Yuanrui (Jerry) Zhu
+       <span class="tags">
+       <span class="tag ug">cs/ds '24</span>
+       <span class="tag hai">human-ai</span>
+       <span class="tag lead">team lead</span>
+     </span></p>
+   </div>
+
+
+      <div class="team-member">
+        <div class="circle-img"><img src="https://miro.medium.com/v2/resize:fill:176:176/1*wXEJQTypjBUKjvKi0hdPvA.jpeg"></div>
+        <p>Ron Wang
+          <span class="tags">
+          <span class="tag ug">cs '24</span>
+          <span class="tag hai">human-ai</span>
+        </span></p>
+      </div>
+
+</div>
+
+
+<h4>Alumni</h4>
+<p><u>Berkeley:</u> Seungho Jon ' 25, Baoer Li '25, Brandon Tang '25, Serena Gu '24, Sriharsha Gutta '24, Xiaowen Liu '24, Nathan Tran '24, Shomini Sen '24, Jacky Kwok '23 <small><em>(EECS MS at Berkeley)</em></small>, <a href="https://www.linkedin.com/in/laura-li17" target="_blank">Laura Li '23</a> <small><em>(MBAn at MIT)</em></small>, Nicole Liu '23 <small><em>(MPH at Berkeley)</em></small>, <a href="https://www.linkedin.com/in/mingyuan-ma-679bb8197" target="_blank">Mingyuan (Jeremy) Ma '23</a> <small><em>(Data Science MS at Harvard)</em></small>, Nick Melamed '23, Ethan Wang '23 <small><em>(Data Science MS at Berkeley)</em></small>, Kareena Wu '23 <small><em>(McKinsey)</em></small>, <a href="https://www.linkedin.com/in/stephenyangjz"  target="_blank">Stephen Yang '23</a> <small><em>(Computational Science & Engineering MS at Harvard)</em></small>
+</p><br>
+
+<p><u>Penn:</u> <a href="https://www.hbs.edu/faculty/Pages/profile.aspx?facId=1460119" target="_blank">Lorry Wu '23</a> <small><em>(Technology & Operations Management PhD at Harvard)</em></small>, Stephen Lin '22 <small><em>(Behavioral & Decision Sciences MS at Penn)</em></small>, <a href="https://www.linkedin.com/in/yuanxin-zhu-202410221" target="_blank">Canary Zhu ’21</a> <small><em>(Information Systems & Management PhD at CMU)</em></small>, Arianna Samet '20, Sarah Kim '20
+</p>
+
+<br>
           <hr>
 
           <a class="anchor" id="otherworks"></a>
@@ -526,7 +783,7 @@ with <a class="hidelink" target="_blank" href="https://oid.wharton.upenn.edu/pro
           <dt class="col-sm-2"><h4>Berkeley Haas</h4></dt>
           <dd class="col-sm-10">
             <p>EWMBA 204 <a data-toggle="collapse" href="#teachewmba204" role="button" aria-expanded="false" aria-controls="collapseExample">Operations <i class="far fa-sticky-note"></i></a> <small>(Instructor)</small>
-            <br><small>Fall 2022 (Evening/Weekend MBA Core)</small>
+            <br><small>Fall 2022, Fall 2023 (Evening/Weekend MBA Core)</small>
             <br><small>Overall rating: 6.8/7 (Fall 2022)</small></p>
             <div class="collapse" id="teachewmba204">
             <div class="card card-body">
