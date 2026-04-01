@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en" data-region="full">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Default is full view -->
+  <title>Wichinpong Sinchaisri</title>
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Google Analytics (keep if you already use it) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65736699-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-65736699-1');
+  </script>
+
+  <!-- Your existing styles -->
+  <link rel="stylesheet" href="./files/timeline.css">
+  <link rel="stylesheet" href="./files/bootstrap.min.css">
+  <link rel="stylesheet" href="./files/sticky.min.css">
+  <link rel="stylesheet" href="./files/main.css">
+  <link rel="stylesheet" href="./files/css/academicons.min.css"/>
+  <link href="./files/css/all.css" rel="stylesheet">
+
+  <style>
+    /* Region gating (default is lite view until we detect otherwise) */
+    html[data-region="full"] .lite-only { display: none !important; }
+    html[data-region="lite"] .full-only { display: none !important; }
+
+    /* Lite view: you asked to remove the blinking left box */
+    html[data-region="lite"] #whoami-terminal,
+    html[data-region="lite"] #whoami-terminal-news {
+      display: none !important;
+    }
+
+    /* Optional: tighten the left column spacing a bit when the terminal is hidden */
+    html[data-region="lite"] #sidebar-contact {
+      margin-top: 10px;
+    }
+
+    .team-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .team-member {
+    flex: 0 0 calc(25% - 20px);
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-member .circle-img {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1; /* Generic silhouette color */
+  }
+
+  .team-member img {
+    width: 100%; /* Adjusted width to fill the circle */
+    height: 100%;
+    max-width: 100%; /* Ensure the image fits within the circle */
+    max-height: 100%; /* Ensure the image fits within the circle */
+    object-fit: cover; /* Maintain aspect ratio and cover the circle */
+    border-radius: 50%;
+  }
+
+  .team-member {
+    flex: 0 0 calc(25% - 20px);
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center align vertically */
+  }
+
+  .team-member .tags {
+    display: flex;
+    flex-wrap: wrap; /* Added to allow tags to wrap */
+    justify-content: center;
+    gap: 5px;
+    margin-top: 5px;
+  }
+
+  .tag {
+    padding: 3px 8px; /* Smaller padding */
+    border-radius: 15px; /* Smaller border-radius */
+    font-size: 10px; /* Smaller font size */
+    color: white;
+  }
+
+  .tag.ug {
+    background-color: #34495e; /* Dark grayish blue */
+  }
+
+  .tag.hai {
+    background-color: #e67e22; /* Dark orange */
+  }
+
+  .tag.gig {
+    background-color: #27ae60; /* Dark green */
+  }
+
+  .tag.phd {
+    background-color: #8e44ad; /* Dark purple */
+  }
+
+  .tag.lead {
+    background-color: #c0392b; /* Dark red */
+  }
+  </style>
+
+  <script>
+  (function () {
+    try {
+      var override = localStorage.getItem("viewOverride");
+      var detected = localStorage.getItem("viewDetected");
+      var r = (override === "full" || override === "lite") ? override : detected;
+      if (r === "full" || r === "lite") {
+        document.documentElement.setAttribute("data-region", r);
+      }
+    } catch (e) {}
+  })();
+</script>
+
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body data-spy="scroll" data-target="#projects-nav">
+
+  <a class="anchor" id="home"></a>
+
+  <!-- Top bar menu: show only in full view -->
+  <nav class="navbar nav-links navbar-inverse navbar-fixed-top full-only">
+    <div class="container">
+      <div class="navbar-collapse" id="bs-example-navbar-collapse-6">
+        <ul class="nav navbar-nav" id="navigation">
+          <li id="nav-name">Park Sinchaisri</li>
+          <li><a href="#home">About</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#portfolio">Research</a></li>
+          <li><a href="#bobalab">BOBALAB</a></li>
+          <!-- Teaching removed per your request -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- ABOUT -->
+    <div class="row">
+      <div class="col-md-4 hidden-xs">
+
+        <img src="images/parkweb.png" alt="headshot" width="80%">
+
+        <!-- This is the blinking box you wanted removed for lite view -->
+        <div class="full-only">
+          <!-- KEEP YOUR ORIGINAL BLINKING BOX CONTENT HERE (unchanged) -->
+          <pre id="whoami-terminal" class="ui sticky terminal">
+  <span class="prompt">2026/</span>Talks
+  <i class="far fa-calendar"></i> <a href="" target="_blank">INSEAD</a> AI for Operations
+  <i class="far fa-calendar"></i> <a href="" target="_blank">NUS</a> AI for Operations
+  <i class="far fa-calendar"></i> <a href="" target="_blank">Rice</a> AI for Operations
+  <i class="far fa-calendar"></i> <a href="" target="_blank">Wharton</a> RL for BOM
+  <i class="far fa-calendar"></i> <a href="" target="_blank">Michigan</a> AI for Operations
+  <i class="far fa-calendar"></i> <a href="" target="_blank">BOC</a> Sequencing Incentives
+  <i class="far fa-calendar"></i> <a href="" target="_blank">BOC</a> Learning across Jobs
+  <i class="far fa-calendar"></i> <a href="https://pomsmeetings.org/conf-2026/" target="_blank">POMS</a> Gig Learning
+  <i class="far fa-calendar"></i> <a href="https://pomsmeetings.org/conf-2026/" target="_blank">POMS</a> Impact of AI Precision
+  <i class="far fa-calendar"></i> <a href="https://pomsmeetings.org/conf-2026/" target="_blank">POMS</a> AI x Productivity
+  <i class="far fa-calendar"></i> More to come<span class="blinking"></span></pre>
+        </div>
+
+        <!-- Sidebar links -->
+        <div id="sidebar-contact">
+          <h4>Contact</h4>
+
+          <!-- Email: full view uses berkeley, lite view uses gmail -->
+          <div class="full-only">
+            <b><i class="fas fa-paper-plane"></i>:</b> parksinchaisri [at] berkeley.edu
+          </div>
+          <div class="lite-only">
+            <b><i class="fas fa-paper-plane"></i>:</b> wichinpong [at] gmail.com
+          </div>
+
+          <br>
+
+          <!-- Links: lite view only Scholar + LinkedIn -->
+          <div class="full-only">
+            <!-- KEEP YOUR ORIGINAL LINKS HERE (CV, Scholar, LinkedIn, Twitter, etc.) -->
+            <a href="files/cv.pdf" class="btn btn-default" target="_blank" role="button"><i class="ai ai-cv ai-2x"></i></a>
+            <a href="https://scholar.google.com/citations?user=viBF-ekAAAAJ&hl=en" class="btn btn-default" target="_blank" role="button"><i class="ai ai-google-scholar ai-2x"></i></a>
+            <a href="http://www.linkedin.com/in/xalapao" class="btn btn-default" target="_blank" role="button"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://twitter.com/parksinchaisri" class="btn btn-default" target="_blank" role="button"><i class="fab fa-twitter fa-2x"></i></a>
+          </div>
+
+          <div class="lite-only">
+            <a href="https://scholar.google.com/citations?user=viBF-ekAAAAJ&hl=en" class="btn btn-default" target="_blank" role="button"><i class="ai ai-google-scholar ai-2x"></i></a>
+            <a href="http://www.linkedin.com/in/xalapao" class="btn btn-default" target="_blank" role="button"><i class="fab fa-linkedin fa-2x"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-8" id="whoami">
+        <h1 id="page-h1-full" class="full-only">Park Sinchaisri</h1>
+        <h1 id="page-h1-lite" class="lite-only">Wichinpong Sinchaisri</h1>
+
+        <small class="lite-only">Operations + Analytics Researcher | Future of Work + Human-AI + Cities</small><br>
+        <br><br>
+
+        <!-- Mobile header -->
+        <div class="hidden-sm hidden-lg hidden-xl hidden-md">
+          <img src="images/parkweb.png" alt="headshot" width="30%"><br>
+
+          <small class="full-only"><i class="fas fa-paper-plane"></i>: parksinchaisri [at] berkeley.edu</small>
+          <small class="lite-only"><i class="fas fa-paper-plane"></i>: parksinchaisri@gmail.com</small>
+
+          <p class="full-only">
+            <a href="files/cv.pdf" class="btn btn-default" target="_blank" role="button"><i class="ai ai-cv ai-2x"></i></a>
+            <a href="http://bit.ly/parkcited" class="btn btn-default" target="_blank" role="button"><i class="ai ai-google-scholar ai-2x"></i></a>
+            <a href="http://www.linkedin.com/in/xalapao" class="btn btn-default" target="_blank" role="button"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://twitter.com/parksinchaisri" class="btn btn-default" target="_blank" role="button"><i class="fab fa-twitter fa-2x"></i></a>
+          </p>
+
+          <p class="lite-only">
+            <a href="http://bit.ly/parkcited" class="btn btn-default" target="_blank" role="button"><i class="ai ai-google-scholar ai-2x"></i></a>
+            <a href="http://www.linkedin.com/in/xalapao" class="btn btn-default" target="_blank" role="button"><i class="fab fa-linkedin fa-2x"></i></a>
+          </p>
+          <br>
+        </div>
+
+        <p class="lead">
+          <span class="full-only">
+            I am an Assistant Professor of
+            <a class="hidelink" target="_blank" href="https://haas.berkeley.edu/oitm/">Operations and Information Technology Management</a>
+            at UC Berkeley <a class="hidelink" target="_blank" href="https://haas.berkeley.edu">Haas School of Business</a>.
+            My official website is <a class="hidelink" target="_blank" href="https://haas.berkeley.edu/faculty/park-sinchaisri/">here</a>.
+            <br><br>
+          </span>
+
+          I study the design and analysis of data-driven and human-centric solutions to problems in operations management, currently focusing on the <a href="#gigdrivers">future of work</a> <small><em>("How do workers decide their flexible schedule?")</em></small>, <a href="#tips">human-AI interfaces</a> <small><em>("Can ML offer simple tips to help humans?")</em></small>, <a href="#markdown">dynamic pricing</a> <small><em>("How to price when it affects quality perception?")</em></small>, and <a href="#blockparty">urban analytics</a> <small><em>("Are more social neighborhoods safer?")</em></small>.
+          <br><br>
+
+          <span class="full-only">
+            My research group, <a href="#bobalab">Berkeley Operations and Behavioral Analytics Lab (<em>BOBALAB</em>)</a>, is looking for collaborators; please reach out.
+            <br><br>
+          </span>
+
+          I received my PhD in <a href="https://oid.wharton.upenn.edu/" target="_blank">Operations, Information, and Decisions</a> and AM in Statistics from <a class="hidelink" target="_blank" href="https://wharton.upenn.edu">The Wharton School</a> at the University of Pennsylvania, where I was also a <a href="https://socialimpact.wharton.upenn.edu/programs/wise-fellowship/" target="_blank">Wharton Social Impact Fellow</a>, my SM in <a class="hidelink" target="_blank" href="https://cse.mit.edu/programs/sm/">Computational Science and Engineering</a> from <a class="hidelink" target="_blank" href="https://www.mit.edu">MIT</a>, and my ScB in Computer Engineering and Applied Mathematics-Economics from <a class="hidelink" target="_blank" href="https://www.brown.edu">Brown University</a>. I had also worked at Oracle, Goldman Sachs, and Deloitte Consulting. Growing up in Bangkok, I am a world traveller, avid foodie, and design/cities enthusiast.
+        </p>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- NEWS: keep as full-view only if you want -->
+    <div class="full-only">
+      <a class="anchor" id="news"></a>
+      <div class="row">
+        <div class="col-md-4 hidden-xs hidden-sm">
+          <!-- Keep your original news terminal if you want (it will be hidden in lite view via CSS above) -->
+          <pre id="whoami-terminal-news" class="ui sticky terminal"><span class="prompt">Park/</span>News</pre>
+        </div>
+
+        <div class="col-md-8" id="news">
+          <div class="hidden-sm hidden-lg hidden-xl hidden-md">
+            <h3>News</h3>
+            <br>
+          </div>
+
+          <!-- Wrapped your dt/dd items in a dl to keep layout consistent -->
+          <dl class="row">
+            <dt class="col-sm-2"><h4>7/31/25</h4></dt>
+            <dd class="col-sm-10">Our paper <i>Learning on the Go</i> is accepted for the <a class="hidelink2" target="_blank" href="https://cscw.acm.org/2025/">28th ACM SIGCHI Conference on Computer-Supported Cooperative Work & Social Computing (CSCW) in Bergen, Norway</a>!</dd>
+
+            <dt class="col-sm-2"><h4>5/22/25</h4></dt>
+            <dd class="col-sm-10">Our paper <i>Improving Human Sequential Decision Making with Reinforcement Learning</i> is now published in <b><a class="hidelink2" href="https://doi.org/10.1287/mnsc.2022.02455" target="_blank">Management Science</a></b>!</dd>
+
+            <dt class="col-sm-2"><h4>5/10/25</h4></dt>
+            <dd class="col-sm-10">Our paper <i>Managing Multihoming Workers</i> is selected for presentation at <a class="hidelink2" target="_blank" href="  https://questromworld.bu.edu/platformstrategy/">the 2025 Platform Strategy Research Symposium</a> in Boston, MA.</dd>
+
+            <dt class="col-sm-2"><h4>11/13/24</h4></dt>
+            <dd class="col-sm-10">I will be presenting two of my papers on human-AI interfaces for sequential decision-making at the <a class="hidelink2" target="_blank" href="">Tuck School of Business, Dartmouth College</a>.</dd>
+
+            <dt class="col-sm-2"><h4>10/21/24</h4></dt>
+            <dd class="col-sm-10">Our paper <i>Managing Multihoming Workers</i> won the Second Place for <a class="hidelink2" target="_blank" href="https://www.informs.org/Recognizing-Excellence/Community-Prizes/Technology-Innovation-Management-and-Entrepreneurship-Section/Best-Working-Paper">the 2024 INFORMS Technology, Innovation Management and Entrepreneurship Section Best Working Paper Competition</a>.</dd>
+
+            <dt class="col-sm-2"><h4>9/20/24</h4></dt>
+            <dd class="col-sm-10">Our paper <i>Making ChatGPT Work For Me</i> is accepted for the <a class="hidelink2" target="_blank" href="https://cscw.acm.org/2025/">28th ACM SIGCHI Conference on Computer-Supported Cooperative Work & Social Computing (CSCW) in Bergen, Norway</a>!</dd>
+
+            <dt class="col-sm-2"><h4>5/18/24</h4></dt>
+            <dd class="col-sm-10">I am honored to win the <a class="hidelink2" target="_blank" href="https://haas.berkeley.edu/faculty-research/teaching-awards/">Earl F. Cheit Award For Excellence In Teaching</a> for my Operations classes at UC Berkeley Haas!</dd>
+
+            <dt class="col-sm-2"><h4>12/31/23</h4></dt>
+            <dd class="col-sm-10">I will be presenting two of my papers on human-AI interfaces for sequential decision-making at the <a class="hidelink2" target="_blank" href="https://www.gsb.stanford.edu/faculty-research/faculty/seminars/operations-information-technology">Stanford Operations, Information & Technology Seminars</a> on March 6, 2024.</dd>
+
+            <dt class="col-sm-2"><h4>10/7/23</h4></dt>
+            <dd class="col-sm-10">I will be presenting two of my papers on human-AI interfaces for sequential decision-making at the <a class="hidelink2" target="_blank" href="https://ide.mit.edu/events/fall-2023-ide-lunch-seminar-series/">MIT Initiative on the Digital Economy Seminar</a> on November 15, 2023.</dd>
+
+            <dt class="col-sm-2"><h4>8/30/23</h4></dt>
+            <dd class="col-sm-10">I am honored and thrilled to present my work at the <a class="hidelink2" target="_blank" href="https://fcba.berkeley.edu/the-future-of-skills-in-the-ai-era/">UC Berkeley–NASA Inaugural Symposium on "The Future of Skills in the AI Era"</a> on September 22, 2023 at NASA’s Ames Research Center!</dd>
+
+            <dt class="col-sm-2"><h4>7/20/23</h4></dt>
+            <dd class="col-sm-10">I am fortunate to receive the 2023 <a class="hidelink2" target="_blank" href="https://fcba.berkeley.edu/">Fisher Center for Business Analytics</a> Research Grant.</dd>
+          </dl>
+        </div>
+      </div>
+      <hr>
+    </div>
+
+    <!-- RESEARCH: shown everywhere -->
+    <a class="anchor" id="portfolio"></a>
+    <div class="row">
+      <div class="col-md-4  hidden-xs hidden-sm" style="height: 1527px;">
+        <div id="projects-terminal" class="ui sticky terminal" style="left: 326px;">
+          <span class="prompt">Park/</span>Research<br><br>
+          <div id="projects-nav">
+            <ul class="nav">
+              <li class=""><a href="#published">Publications</a></li>
+              <li class=""><a href="#blockparty">- Community Vibrancy</a></li>
+              <li class=""><a href="#gigdrivers">- Drivers of Gig Workers</a></li>
+              <li class=""><a href="#tips">- Improve Human DM w/ RL</a></li>
+              <li class=""><a href="#chatgpt">- ChatGPT for Education</a></li>
+              <li class=""><a href="#giglearning">- Gig Workers' Learning</a></li>
+              <li class=""><a href="#working">Working Papers</a></li>
+              <li class=""><a href="#markdown">- Behavioral Markdown Pricing</a></li>
+              <li class=""><a href="#structural">- Manage Multihoming Workers</a></li>
+              <li class=""><a href="#driving">- AI Advice Precision</a></li>
+              <li class=""><a href="#backward">- GenAI & Productivity</a></li>
+              <li class=""><a href="#strategicadvice">- Enterprise vs Personal AIs</a></li>
+              <li class=""><a href="#armagency">- Bandits w/ Arm Agency</a></li>
+              <li class=""><a href="#nonadoption">- Tip Non-Adoption</a></li>
+              <li class=""><a href="#workinprogress">Work in Progress</a></li>
+
+              <!-- Show BOBALAB link only in full view -->
+              <li class="full-only"><a href="#bobalab">BOBALAB</a></li>
+
+              <li class=""><a href="#otherworks">Other Works</a></li>
+              <li class=""><a href="#mental">- Student Mental Health</a></li>
+              <li class=""><a href="#impact">- Social Impact in Practice</a></li>
+              <li class=""><a href="#peopleanalytics">- People Analytics</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-8" id="projects">
+        <div class="hidden-sm hidden-lg hidden-xl hidden-md">
+          <h3>Research</h3>
+          <br>
+        </div>
+
+        <div class="hidden-sm hidden-lg hidden-xl hidden-md">
+          <h3>Research</h3>
+          <br>
+        </div>
+
+        <dl class="row">
+          <dt class="col-sm-2"><h4>Research Interests</h4></dt>
+          <dd class="col-sm-10">Behavioral and human-centric operations management, empirical operations management, future of work/gig economy, people analytics, behavioral economics, applied machine learning, human-computer interaction, revenue management and pricing, urban analytics, computational social science</dd>
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-2"><h4>Research Methods</h4></dt>
+          <dd class="col-sm-10">Econometrics, randomized experiments, reinforcement learning, interpretable machine learning, structural estimation</dd>
+        </dl>
+        <hr>
+
+        <a class="anchor" id="published"></a>
+        <h3>Publications</h3>
+        <br>
+
+        <a class="anchor" id="blockparty"></a>
+        <h4>Community Vibrancy and its Relationship with Safety in Philadelphia</h4>
+        with <a class="hidelink" target="_blank" href="http://www-stat.wharton.upenn.edu/~stjensen/">Shane Jensen</a><br>
+        <p class="mb-0"><em><b>PLoS ONE</b> (2021)</em>
+        <br><em>Press: <a class="hidelink" href="https://socialimpact.wharton.upenn.edu/story/wise-fellows-use-real-world-data-to-help-inform-philadelphia-city-policy/" target="_blank">Wharton Stories</a></em>
+        <br> <i class="fas fa-award"></i><a class="lowkey"> Wharton Social Impact Initiative Fellowship, 2018-2020</a>
+        </p>
+        <p>
+          <a class="btn btn-default" data-toggle="collapse" href="#abstractblock" role="button" aria-expanded="false" aria-controls="collapseExample">abstract</a>
+          <a href="https://doi.org/10.1371/journal.pone.0257530" class="btn btn-default" target="_blank" role="button">Paper</a>
+          <a href="files/paper-blockparty.pdf" class="btn btn-default" target="_blank" role="button">PDF</a>
+        </p>
+        <div class="collapse" id="abstractblock">
+          <div class="card card-body">
+            <blockquote class="blockquote"> To what extent can the strength of a local urban community impact neighborhood safety? We construct measures of community vibrancy based on a unique dataset of block party permit approvals from the City of Philadelphia. Our first measure captures the overall volume of block party events in a neighborhood whereas our second measure captures differences in the type (regular versus spontaneous) of block party activities. We use both regression modeling and propensity score matching to control for the economic, demographic and land use characteristics of the surrounding neighborhood when examining the relationship between crime and our two measures of community vibrancy. We conduct our analysis on aggregate levels of crime and community vibrancy from 2006 to 2015 as well as the trends in community vibrancy and crime over this time period. We find that neighborhoods with a higher number of block parties have a significantly higher crime rate, while those holding a greater proportion of spontaneous block party events have a significantly lower crime rate. We also find that neighborhoods which have an increase in the proportion of spontaneous block parties over time are significantly more likely to have a decreasing trend in total crime incidence over that same time period.</blockquote>
+          </div>
+        </div>
+
+        <hr>
+
+        <a class="anchor" id="gigdrivers"></a>
+        <h4>The Impact of Behavioral and Economic Drivers on Gig Economy Workers <i class="fas fa-star"></i></h4>
+        with <a class="hidelink" target="_blank" href="https://oid.wharton.upenn.edu/profile/gadallon/">Gad Allon</a> and <a class="hidelink" target="_blank" href="https://maxccohen.github.io/">Maxime Cohen</a><br>
+        <p class="mb-0"><em><b>Manufacturing & Service Operations Management</b> (2023)</em>
+        <br> <em> Press: <a class="hidelink" href="https://knowledge.wharton.upenn.edu/article/what-motivates-workers-in-the-gig-economy/" target="_blank">Knowledge@Wharton</a>, <a class="hidelink" href="https://newsroom.haas.berkeley.edu/research/study-in-the-gig-economy-getting-to-know-workers-motivation-is-key-to-retaining-them/" target="_blank">Haas Newsroom</a></em></p>
+        <p class="mb-0"><i class="fas fa-award"></i><a class="lowkey"> Best Paper in Operations and Supply Chain Management, Academy of Management, 2019</a>
+        <br> <i class="fas fa-award"></i><a class="lowkey"> Accepted to the 2019 MSOM Service Management SIG</a>
+        <br> <i class="fas fa-award"></i><a class="lowkey"> 2nd Place, People Analytics Conference Research Paper Competition, 2019</a>
+        <br> <i class="fas fa-award"></i><a class="lowkey"> 3rd Place, INFORMS Behavioral Operations Management Best Working Paper Award, 2019</a>
+        <br> <i class="fas fa-award"></i><a class="lowkey"> Finalist, POMS CBOM Junior Scholar Paper Competition, 2020</a>
+        <br> <i class="fas fa-award"></i><a class="lowkey"> Winner, Baker Retailing Center Research Grant, 2018</a>
+        </p>
+        <p>
+          <a class="btn btn-default" data-toggle="collapse" href="#abstractgig" role="button" aria-expanded="false" aria-controls="collapseExample">abstract</a>
+          <a href="https://pubsonline.informs.org/doi/abs/10.1287/msom.2023.1191" class="btn btn-default" target="_blank" role="button">Paper</a>
+          <a href="files/paper-gigdrivers.pdf" class="btn btn-default" target="_blank" role="button">PDF</a>
+        </p>
+        <div class="collapse" id="abstractgig">
+          <div class="card card-body">
+            <blockquote class="blockquote">
+              Gig economy companies benefit from labor flexibility by hiring independent workers in response to real-time demand. However, workers' flexibility in their work schedule poses a great challenge in terms of planning and committing to a service capacity. Understanding what motivates gig economy workers is thus of great importance. In collaboration with a ride-hailing platform, we study how on-demand workers make labor decisions; specifically, when to work and for how long. Our model offers a way to reconcile competing theories of labor supply regarding the impact of financial incentives and behavioral motives on labor decisions. We are interested in both improving how to predict the behavior of gig economy workers and understanding how to design better incentives. Using a large comprehensive dataset, we develop an econometric model to analyze workers' labor decisions and responses to incentives while accounting for sample selection and endogeneity. We find that financial incentives have a significant positive influence on the decision to work and on the work duration-confirming the positive income elasticity posited by the standard income effect. We also find support for a behavioral theory as workers exhibit income-targeting behavior (working less when reaching an income goal) and inertia (working more after working for a longer period). We demonstrate via numerical experiments that incentive optimization based on our insights can increase service capacity by 22% without incurring additional cost, or maintain the same capacity at a 30% lower cost. Ignoring behavioral factors could lead to understaffing by 10-17% below the optimal capacity level. Lastly, inertia could be a potential sign of workers' loyalty to the platform.
+            </blockquote>
+          </div>
+        </div>
+
+        <hr>
+
+        <a class="anchor" id="tips"></a>
+        <h4>Improving Human Sequential Decision Making with Reinforcement Learning</h4>
+        with <a class="hidelink" target="_blank" href="https://hamsabastani.github.io/">Hamsa Bastani</a> and <a class="hidelink" target="_blank" href="https://obastani.github.io/">Osbert Bastani</a><br>
+        <p class="mb-0"><em><b>Management Science</b> (2025)</em></p>
+        <p class="mb-0"> <i class="fas fa-award"></i><a class="lowkey"> Winner, INFORMS Data Mining Best Paper Award, 2022</a>
+          <br><i class="fas fa-award"></i><a class="lowkey"> Winner, WISE Best Conference Paper Award, 2022</a>
+          <br><i class="fas fa-award"></i><a class="lowkey"> Winner, INFORMS Behavioral OM Best Working Paper Award, 2021</a>
+          <br><i class="fas fa-award"></i><a class="lowkey"> 2nd Place, INFORMS TIMES Best Working Paper Award, 2021</a>
+          <br> <i class="fas fa-award"></i><a class="lowkey"> 2nd Place, POMS CBOM Junior Scholar Paper Competition, 2021</a>
+          <br> <i class="fas fa-award"></i><a class="lowkey"> Accepted to the 2021 MSOM Service Management SIG</a>
+          <br><i class="fas fa-award"></i><a class="lowkey"> Accepted to the Workshop on Operations of People-Centric Systems at EC'21</a>
+        </p>
+        <p>
+          <a class="btn btn-default" data-toggle="collapse" href="#abstracttips" role="button" aria-expanded="false" aria-controls="collapseExample">abstract</a>
+          <a href="https://doi.org/10.1287/mnsc.2022.02455" class="btn btn-default" target="_blank" role="button">Paper</a>
+          <a href="files/paper-tips.pdf" class="btn btn-default" target="_blank" role="button">PDF</a>
+        </p>
+        <div class="collapse" id="abstracttips">
+          <div class="card card-body">
+            <blockquote class="blockquote">
+              Workers spend a significant amount of time learning how to make good decisions. Evaluating the efficacy of a given decision, however, can be complicated --- e.g., decision outcomes are often long-term and relate to the original decision in complex ways. Surprisingly, even though learning good decision-making strategies is difficult, they can often be expressed in simple and concise forms. Focusing on sequential decision-making, we design a novel machine learning algorithm that is capable of extracting "best practices" from trace data and conveying its insights to humans in the form of interpretable "tips". Our algorithm selects the tip that best bridges the gap between the actions taken by the human workers and those taken by the optimal policy in a way that accounts for which actions are consequential for achieving higher performance. We evaluate our approach through a series of randomized controlled user studies where participants manage a virtual kitchen. Our experiments show that the tips generated by our algorithm can significantly improve human performance relative to intuitive baselines. In addition, we discuss a number of empirical insights that can help inform the design of algorithms intended for human-AI interfaces. For instance, we find evidence that participants do not simply blindly follow our tips; instead, they combine them with their own experience to discover additional strategies for improving performance.
+            </blockquote>
+          </div>
+        </div>
+
+        <hr>
+
+        <a class="anchor" id="chatgpt"></a>
+        <h4>Making ChatGPT Work for Me</h4>
+        <p class="mb-0">with <a class="hidelink" target="_blank" href="http://www.samanthakeppler.com/">Samantha Keppler</a> and <a class="hidelink" target="_blank" href="https://claresny.github.io/">Clare Snyder</a></p>
+        <p class="mb-0"><em><b>Proceedings of the ACM on Human-Computer Interaction</b> (2025)</em><br>
+        <em>Press: <a class="hidelink" href="https://theconversation.com/teachers-feel-most-productive-when-they-use-ai-for-teaching-strategies-236543" target="_blank">The Conversation</a>, <a class="hidelink" href="https://www.the74million.org/article/beyond-lessons_plans_ai_can_boost_teacher_creativity_provide_classroom_advice/" target="_blank">The 74 Million</a></em></p>
+        <p>
+          <a class="btn btn-default" data-toggle="collapse" href="#abstractchatgpt" role="button" aria-expanded="false" aria-controls="collapseExample">abstract</a>
+          <a href="https://dl.acm.org/doi/10.1145/3711026" class="btn btn-default" target="_blank" role="button">Paper</a>
+          <a href="files/paper-chatgpt.pdf" class="btn btn-default" target="_blank" role="button">PDF</a>
+        </p>
+        <div class="collapse" id="abstractchatgpt">
+          <div class="card card-body">
+            <blockquote class="blockquote">
+              Increasingly, work happens through human collaboration with generative AI (e.g., ChatGPT). In this paper, we conduct a qualitative study of this collaboration for real-life work tasks. We focus our study on full-view public school teachers (N = 24) who must regularly complete text-generation tasks including creating quizzes, slide decks, word problems, reading passages, lesson plans, classroom activities, and/or projects. In one-on-one video- and audio-recorded virtual sessions, we observe each teacher use ChatGPT-4 for work tasks of their choosing for 15 minutes, and debrief their experience. Analyzing 201 prompts inputted by the 24 teachers, we uncover four main modes in which the teachers request support from ChatGPT: (1) make for me (55% of prompts), (2) find for me (15%), (3) jump-start for me (10.5%), and (4) iterate with me (15.5%). When we analyze the data at the conversation level, where a conversation is one or more prompts about the same topic, we find 66 out of the 80 teacher-ChatGPT conversations in our data employ only one support mode. In only 14 conversations did teachers combine different modes of support. A follow-up survey of the same 24 teachers reinforces our evidence of the prompt- and conversation-level variety in ChatGPT use "in the wild." Our findings contribute to an emerging theory of generative AI use in practice.
+            </blockquote>
+          </div>
+        </div>
+
+        <hr>
+
+        <a class="anchor" id="giglearning"></a>
+        <h4>Learning on the Go: Understanding How Gig Economy Workers Learn with Recommendation Algorithms</h4>
+        <p class="mb-0">with <a class="hidelink" target="_blank" href="https://www.linkedin.com/in/jiangshunan">Shunan Jiang</a></p>
+        <p class="mb-0"><em><b>Proceedings of the ACM on Human-Computer Interaction</b> (2025)</em><br></p>
+        <p>
+          <a class="btn btn-default" data-toggle="collapse" href="#abstractgiglearning" role="button" aria-expanded="false" aria-controls="collapseExample">abstract</a>
+          <a href="https://dl.acm.org/doi/10.1145/3757621" class="btn btn-default" target="_blank" role="button">Paper</a>
+          <a href="files/paper-learningonthego.pdf" class="btn btn-default" target="_blank" role="button">PDF</a>
+        </p>
+        <div class="collapse" id="abstractgiglearning">
+          <div class="card card-body">
+            <blockquote class="blockquote">
+              As gig economy platforms increasingly rely on algorithms to manage workers, understanding how algorithmic recommendations influence worker behavior is critical for optimizing platform design and improving worker welfare. In this paper, we investigate the dynamic interactions between gig workers and platform algorithms, with a particular focus on how workers learn to improve their strategy and performance over time. Using multiple quantitative methods, including two-way fixed-effects regression and multinomial logit modeling, we analyze over one million orders completed by gig workers on a retail delivery platform. Our findings reveal a clear learning curve: workers progressively improving their efficiency and on-time delivery performance with increased experience. We also find that while newcomers heavily rely on algorithmic recommendations for task selection, more experienced workers tend to deviate from these recommendations, developing and employing personalized strategies. This shift suggests that experienced workers may perceive algorithmic recommendations as less beneficial or misaligned with their evolved preferences, highlighting the necessity for adaptive recommendation systems. Our research underscores the importance of designing human-centric recommendation algorithms that accommodate workers' learning trajectories, incorporate their feedback, and offer flexibility to support personalized strategies, ultimately enhancing collaborative dynamics and outcomes for both workers and platforms.
+            </blockquote>
+          </div>
+        </div>
+
+        <hr>
+
+        <a class="anchor" id="working"></a>
+        <h3>Working Papers</h3>
+        <br>
+
+        <a class="anchor" id="markdown"></a>
+        <h4>Markdown Pricing with Quality Perception</h4>
+        with <a class="hidelink" target="_blank" href="https://www.mcgill.ca/desautels/rim-hariss">Rim Hariss</a>, <a class="hidelink" target="_blank" href="https://mitmgmtfaculty.mit.edu/gperakis/">Georgia Perakis</a>, and <a class="hidelink" target="_blank" href="https://mitmgmtfaculty.mit.edu/yanchong/">Y. Karen Zheng</a><br>
+        <p class="mb-0"><em>Major Revision (2nd Round) at <b>Manufacturing & Service Operations Management</b></em>
+        <br> <i class="fas fa-award"></i><a class="lowkey"> Honorable Mention, MIT ORC Best Student Paper Award, 2017</a></p>
+        <p>
+          <a class="btn btn-default" data-toggle="collapse" href="#abstractpq" role="button" aria-expanded="false" aria-controls="collapseExample">abstract</a>
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3634129" class="btn btn-default" target="_blank" role="button">SSRN [Sep 2020]</a>
+        </p>
+        <div class="collapse" id="abstractpq">
+          <div class="card card-body">
+            <blockquote class="blockquote">
+              Consumers often perceive higher-priced products to have higher quality. Less is known on how quality perception is aﬀected by price markdowns. In addition, it is an open question whether and how consumers' ex-ante expectation on a future markdown aﬀects their quality perception as well as purchase decisions. We answer these questions in a markdown setting under a ﬁxed inventory. This paper adds to the growing literature that incorporates consumers' behavioral regularities in revenue management by studying the new dimension of quality perception and generates new insights absent in the current literature. Our results oﬀer insights on how retailers should adapt their markdown strategy in the presence of price-based quality perception. We develop a consumer model that incorporates quality perception and emotional loss when the expected markdown is too optimistic as compared to the actual markdown. We embed this model into the retailer's markdown optimization and examine the impact of consumers' behavioral factors on the retailer's optimal strategy. Finally, we design and conduct a consumer study to calibrate our model and validate the functional relationships among key factors. Consumers' quality perception increases with the products full price while it decreases with the (expected) markdown. We show that the retailer's optimal markdown is nonmonotone in these quality perception parameters. The nonmonotonicity is driven by the nontrivial tradeoﬀ of trying to maintain a higher perceived quality by the consumers while controlling potential loss emotion that could arise if consumers observe a smaller-than-expected markdown, particularly when total market demand is not very large. Furthermore, we ﬁnd that it is beneﬁcial for the retailer to pre-announce and commit to a markdown strategy to prevent a mismatch between consumers' expectation and the actual markdown. This approach beneﬁts the retailer by eliminating the negative eﬀect on sales of the consumers' loss emotion due to an optimistic expectation. Ignoring these behavioral factors can substantially hurt the retailer's payoﬀ. When inventory is tight, it is critical to correctly capture consumers quality perception (38% average loss in payoﬀ if ignored). When instead inventory is suﬃcient, the retailer should be mindful of the potential emotional loss that its markdown could create among its consumers.
+            </blockquote>
+          </div>
+        </div>
+
+        <hr>
+
+        <a class="anchor" id="structural"></a>
+        <h4>Managing Multihoming Workers in the Gig Economy</h4>
+        <p class="mb-0">with <a class="hidelink" target="_blank" href="https://oid.wharton.upenn.edu/profile/gadallon/">Gad Allon</a>, <a class="hidelink" target="_blank" href="https://maxccohen.github.io/">Maxime Cohen</a>, and <a class="hidelink" target="_blank" href="https://oid.wharton.upenn.edu/profile/kenmoon/">Ken Moon</a></p>
+        <p class="mb-0"><em>Submitted</em><br>
+          <i class="fas fa-award"></i><a class="lowkey"> 2nd Place, INFORMS TIMES Best Working Paper Award, 2024</a><br>
+          <i class="fas fa-award"></i><a class="lowkey"> Accepted to the 2023 MSOM Service Management SIG</a><br>
+          <i class="fas fa-award"></i><a class="lowkey"> Spotlight Presentation at the 2022 INFORMS RMP Conference</a><br>
+          <i class="fas fa-award"></i><a class="lowkey"> Mack Institute Research Fellowship, 2020</a>
+          <br> <i class="fas fa-award"></i><a class="lowkey"> Fishman Davidson Center Research Grant, 2019</a>
+          <br> <i class="fas fa-award"></i><a class="lowkey"> Russell Ackoff Fellowship, 2019</a>
+        </p>
+        <p>
+          <a class="btn btn-default" data-toggle="collapse" href="#abstractstructural" role="button" aria-expanded="false" aria-controls="collapseExample">abstract</a>
+          <a href="files/paper-multihoming.pdf" class="btn btn-default" target="_blank" role="button">PDF [February 2026]</a>
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4502968" class="btn btn-default" target="_blank" role="button">SSRN [February 2026]</a>
+        </p>
+        <div class="collapse" id="abstractstructural">
+          <div class="card card-body">
+            <blockquote class="blockquote">
+              Gig economy platforms increasingly compete to source labor from common pools of multihoming workers, who dynamically allocate their services between competing platforms. Therefore, the question of how platforms can design pay and other levers to attract labor has gained significance. However, standard gig economy data are often incomplete from a choice modeling perspective, which impedes platforms' understanding of workers' multihoming preferences and choices. We study this problem using data shared by a major ride-hailing platform integrated with public data revealing the drivers' outside options in NYC. We structurally estimate a dynamic work-or-switch model using a novel combination of simulation and adversarial machine learning to overcome the empirical problem of contextually incomplete choice data. We find drivers to be significantly focused on short-horizon intraday payoffs while displaying significant heterogeneity in their costs of working. We offer prescriptions for platforms based on counterfactual analyses. We find that at a fixed labor cost, offering dynamic but guaranteed hourly pay rates can increase labor capacity over paying workers on a per-trip basis. A substantial segment of drivers are rarely observed to use pay-per-work platforms and would demand substantially increased compensation to accept that mode of pay. Next, we conduct a counterfactual policy exercise based on New York City's Driver Income Rules; this out-of-sample exercise validates recent empirical studies showing that higher posted pay worsens congestion while achieving muted gains in realized earnings. As alternative levers, platforms can reduce multihoming via offering streak bonuses, but impeding quits induces drivers to switch earlier to other platforms. Overall, managing multihoming requires aligning pay timing with workers' decision horizons, and instituting wage floors requires complementary measures to manage increased congestion.
+            </blockquote>
+          </div>
+        </div>
+
+        <hr>
+
+        <a class="anchor" id="driving"></a>
+        <h4>Precise or Broad? Designing Algorithmic Advice for Learning in Sequential Decision Making</h4>
+        with <a class="hidelink" target="_blank" href="https://pblaettchen.com/">Philippe Blaettchen</a>
+        <p class="mb-0">
+          <i class="fas fa-award"></i><a class="lowkey"> Accepted to the 2025 CHI Workshop on Human-AI Interaction for Augmented Reasoning</a><br>
+          <i class="fas fa-award"></i><a class="lowkey"> Accepted to the 2025 EC Workshop on Human-AI Collaboration</a><br>
+          <i class="fas fa-award"></i><a class="lowkey"> Berkeley AI Research Commons Grant, 2021</a><br>
+          <i class="fas fa-award"></i><a class="lowkey"> Center for Growth Markets Research Grant, 2022</a>
+        </p>
+        <p>
+          <a class="btn btn-default" data-toggle="collapse" href="#abstractev" role="button" aria-expanded="false" aria-controls="collapseExample">abstract</a>
+        </p>
+        <div class="collapse" id="abstractev">
+          <div class="card card-body">
+            <blockquote class="blockquote">
+              Organizations increasingly deploy algorithmic tools to support complex operational decisions, raising a practical design question: how should these tools be built when designers care not only about immediate performance, but also about preserving and building human skill that remains valuable when advice is unavailable, imperfect, or requires genuine oversight? We study how the \emph{precision} of algorithmic advice shapes this trade-off. We develop a stylized model of advice-taking and learning. The model characterizes a reward-learning frontier: precise, action-level advice is easier to implement and improves payoffs while available through higher compliance, whereas broad, strategic advice requires interpretation, induces greater exploration, and generates knowledge that is portable, even when decision environments differ. We test the model's predictions in two online experiments in an electric-vehicle routing and charging task, representing typical characteristics of sequential decision tasks. Consistent with the theory, precise numerical advice delivers the strongest gains during the advice phase, whereas broader advice can yield more robust performance after advice is removed, specifically if the new environment differs substantially, but not completely. We use inverse reinforcement learning to recover interpretable latent objective components from action traces, distinguishing transient compliance from persistent internalization. Our results provide design guidance for advice systems that balance short-run operational efficiency with the development of long-run human capability. They also help validate inverse reinforcement learning as an effective tool for estimating human behaviors in complex sequential tasks.
+            </blockquote>
+          </div>
+        </div>
+
+        <hr>
+
+        <a class="anchor" id="backward"></a>
+        <h4>The Teacher's Knapsack: Generative AI and Teacher Productivity</h4>
+        <!--h4>Backwards Planning with Generative AI: Case Study Evidence from full-view K12 Teachers</h4-->
+        <p class="mb-0">with <a class="hidelink" target="_blank" href="http://www.samanthakeppler.com/">Samantha Keppler</a> and <a class="hidelink" target="_blank" href="https://claresny.github.io/">Clare Snyder</a></p>
+        <p>
+          <a class="btn btn-default" data-toggle="collapse" href="#abstractbackward" role="button" aria-expanded="false" aria-controls="collapseExample">abstract</a>
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4924786" class="btn btn-default" target="_blank" role="button">SSRN [Feb 2026]</a>
+        </p>
+        <div class="collapse" id="abstractbackward">
+          <div class="card card-body">
+            <blockquote class="blockquote">
+              Problem definition: Generative AI are multipurpose tools, meaning they can be used for a variety of different types of tasks. A primary reason generative AI may have a particularly large impact on teacher productivity is because teacher work involves a large variety of tasks (i.e., activities, quizzes, projects, presentations). Yet, teacher work is also characterized by high amount of  task discretion. Teachers often choose which task they do, such as between creating a worksheet or doing a hands on activity to teach a concept. How does generative AI impact the productivity of teachers who both plan and do their work? Methodology/results: We conduct a study that integrates a theoretical model of teacher task selection---a time-minimizing knapsack---with qualitative evidence about teacher use of generative AI. Specifically, we conducted in-depth interviews (29), observations (360 minutes of recordings of teachers using ChatGPT for their work), and surveys (34) at multiple points in time from 24 full-view K12 teachers varying in grade level and subject taught. We find that teachers use generative AI at the task level, as support for completing their to-do list, but also in some cases at the planning level, as support for coming up with their to-do list. Within a knapsack framework, planning-level generative AI use helps teachers ``re-optimize" their set of selected tasks given the impact of generative AI on task speed and quality. However at the task level, teachers simply use generative AI for their original set of tasks, leaving potential productivity gains unrealized. The productivity gap between planning-level and task-level generative AI use could be quite large, particularly when AI makes some tasks much faster or much higher quality---or much slower or worse--- than they were before generative AI. Managerial implications: Our study resolves an ongoing debate as to whether generative AI is helpful for teacher ``lesson planning." Productivity gains are not fully realized when teachers simply use generative AI on tasks they have done in the past. For teacher work, productivity gains from generative AI will be driven more by the substitution of tasks rather than the acceleration of existing ones.
+            </blockquote>
+          </div>
+        </div>
+
+                <hr>
+
+        <a class="anchor" id="strategicadvice"></a>
+        <h4>Strategic Advice in the Age of Personal AI</h4>
+        <p class="mb-0">with <a class="hidelink" target="_blank" href="https://yuey7x.github.io/">Yueyang Liu</a></p>
+        <p>
+          <a class="btn btn-default" data-toggle="collapse" href="#abstractstrategicadvice" role="button" aria-expanded="false" aria-controls="collapseExample">abstract</a>
+          <a href="https://arxiv.org/abs/2603.02055" class="btn btn-default" target="_blank" role="button">arXiv [Mar 2026]</a>
+        </p>
+        <div class="collapse" id="abstractstrategicadvice">
+          <div class="card card-body">
+            <blockquote class="blockquote">
+              Personal AI assistants have changed how people use institutional and professional advice. We study this new strategic setting in which individuals may stochastically consult a personal AI whose recommendation is predictable to the focal advisor. Personal AI enters this strategic environment along two dimensions: how often it is consulted and how much weight it receives in the human's decision when consulted. Anticipating this, the advisor responds by counteracting the personal AI recommendation. Counteraction becomes more aggressive as personal AI is consulted more often. Yet advisor performance is non-monotone: equilibrium loss is highest at intermediate levels of adoption and vanishes when personal AI is never used or always used. Trust affects performance through a single relative influence index, and greater relative influence of personal AI increases advisor vulnerability. Extending the framework to costly credibility building, we characterize how personal AI adoption reshapes incentives to invest in trust.
+            </blockquote>
+          </div>
+        </div>
+
+        <hr>
+
+        <a class="anchor" id="armagency"></a>
+        <h4>Learning to Gig: Two-Phase Bandits with Arm Agency and Learning</h4>
+        <p class="mb-0">with <a class="hidelink" target="_blank" href="https://www.linkedin.com/in/williamdhn/">Haonan Deng</a>, <a class="hidelink" target="_blank" href="https://www.linkedin.com/in/jiangshunan">Shunan Jiang</a>, <a class="hidelink" target="_blank" href="https://www.linkedin.com/in/xinpeng-qu-377219273/">Xinpeng Qu</a></p>
+        <p>
+          <a class="btn btn-default" data-toggle="collapse" href="#abstractarmagency" role="button" aria-expanded="false" aria-controls="collapseExample">abstract</a>
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5387320" class="btn btn-default" target="_blank" role="button">SSRN [Aug 2025]</a>
+        </p>
+        <div class="collapse" id="abstractarmagency">
+          <div class="card card-body">
+            <blockquote class="blockquote">
+              Gig platforms increasingly use algorithmic recommendations to steer workers toward tasks, but recommendations are only effective when workers both accept the suggested tasks and can execute them well. This paper studies how a platform should recommend a batch of tasks when workers are heterogeneous, improve with experience, and accept tasks strategically. We develop a stylized model in which each worker's latent service quality follows a learning curve and task acceptance follows a logit response to expected performance. The platform's per-round objective trades off the expected quality of the executed task against the risk of market failure when no worker accepts. We first show that the platform's expected reward is monotone submodular, which motivates a scalable greedy oracle benchmark. We then propose C-UCB-LR, a learning-aware combinatorial UCB policy that exploits submodularity while learning worker-specific quality parameters from noisy service outcomes, and we derive a learning-theoretic sublinear regret bound. To address operational reliability, we also introduce a safe variant that enforces a user-specified lower bound on the probability of at least one acceptance. Finally, we calibrate the model using large-scale operational data from a U.S. retail delivery platform and run counterfactual simulations. The calibrated environment highlights sizable gains from learning-aware recommendations relative to baselines that ignore worker learning or acceptance behavior.
+            </blockquote>
+          </div>
+        </div>
+
+        <hr>
+
+        <a class="anchor" id="nonadoption"></a>
+        <h4>Understanding Non-Adoption of "Optimal" Algorithmic Advice for Problem Solving</h4>
+        <p class="mb-0">with <a class="hidelink" target="_blank" href="https://tech4good.soe.ucsc.edu/#/people/David-Lee-2018">David Lee</a></p>
+        <p class="mb-0"><i class="fas fa-award"></i><a class="lowkey"> Accepted to CHI'22 Workshop on Trust and Reliance in AI-Human Teams</a></p>
+        <p>
+          <a class="btn btn-default" data-toggle="collapse" href="#abstractnonadoption" role="button" aria-expanded="false" aria-controls="collapseExample">abstract</a>
+          <a href="files/paper-hicss26.pdf" class="btn btn-default" target="_blank" role="button">PDF [June 2025]</a>
+        </p>
+        <div class="collapse" id="abstractnonadoption">
+          <div class="card card-body">
+            <blockquote class="blockquote">
+              Prior research on human-AI systems has focused on simple adopt/reject decisions on AI-generated tips, leaving sequential decision-making contexts less explored. In sequential tasks, tips suggest best practices that humans must operationalize across multiple decisions towards a problem-solving objective. In this paper, we explore human non-adoption of such tips in a virtual kitchen management task where disruptions necessitate a change of strategy. A qualitative analysis reveals diverse views of tips: as rules, directional principles, experimental options, or initially ignorable advice. Tips can still benefit those who reject them through creating focal points influencing worker sense-making. The challenge of operationalizing tips can lead to diverse barriers not just related to trust, but also to tip usability and environmental factors. A follow-up quantitative study confirmed three prominent barriers impacting participant intent to use tips. It also found that problem solving style, specifically an "Orientation to Change", may influence one's experience of barriers and tip adoption.
+            </blockquote>
+          </div>
+        </div>
+
+        <hr>
+
+        <a class="anchor" id="workinprogress"></a>
+        <h3>Work in Progress</h3>
+        <br>
+
+        <a class="anchor" id="bryce"></a>
+        <h4>Managing Competitive Multi-agent Environments with Recommendation Algorithms </h4>
+        with <a class="hidelink" target="_blank" href="https://www.bhmclaughlin.com/">Bryce McLaughlin</a>
+        <p><br></p>
+
+        <a class="anchor" id="lmwn"></a>
+        <h4>Designing and Sequencing Incentives for Platform Workers</h4> (solo-authored)
+        <p><br></p>
+
+        <a class="anchor" id="ryanj"></a>
+        <h4>Learning Across Jobs</h4>
+        with <a class="hidelink" target="_blank" href="">Ryan Jesubalan</a>
+        <p><br></p>
+
+        <a class="anchor" id="yixiang"></a>
+        <h4>Experimentation without Experiments</h4>
+        with Xinwei Chen, Xiexin Liu, Yixiang Xu
+        <p><br></p>
+    <hr>
+
+    <!-- Full-view BOBALAB -->
+    <div class="full-only">
+      <a class="anchor" id="bobalab"></a>
+      
+                <h3>Berkeley Operations & Behavioral Analytics (BOBALAB)</h3>
+<br>
+
+<p>We are currently looking for undergraduate/graduate research assistants as well as academic/industry collaborators for several projects on human-AI interfaces for operations managemen and the future of work</a> through <a href="https://research.berkeley.edu/urap/application/" class="hidelink" target="_blank">Berkeley's URAP program</a> or <a>bobalab [at] berkeley.edu</a></p>
+<br>
+
+<h4>Current Students (2026)</h4>
+<div class="team-section">
+
+  <!--div class="team-member">
+    <div class="circle-img"><img src="bobalab/kristin.jpg"></div>
+    <p><a href="https://www.linkedin.com/in/nuo-chen-15ba32228/" class="hidelink" target="_blank">Kristin Chen</a>
+      <span class="tags">
+      <span class="tag ug">data sci '24</span>
+      <span class="tag gig">future of work</span>
+      <span class="tag lead">team lead</span>
+    </span></p>
+  </div-->
+
+  <!--div class="team-member">
+    <div class="circle-img"><img src="bobalab/lawrence.JPG"></div>
+    <p><a href="https://www.linkedin.com/in/lawrchen/" class="hidelink" target="_blank">Lawrence Chen</a>
+      <span class="tags">
+      <span class="tag ug">econ/ds '25</span>
+      <span class="tag gig">future of work</span>
+    </span></p>
+  </div-->
+
+  <div class="team-member">
+    <div class="circle-img"><img src="bobalab/nicholas.jpeg"></div>
+    <p><a href="https://www.nicholaschen.dev" class="hidelink" target="_blank">Nicholas Chen</a>
+      <span class="tags">
+      <span class="tag ug">eecs '29</span>
+      <span class="tag hai">human-ai</span>
+    </span></p>
+  </div>
+
+  <!--div class="team-member">
+    <div class="circle-img"><img src="bobalab/brandonchin.jpeg"></div>
+    <p>Brandon Chin
+      <span class="tags">
+      <span class="tag ug">eecs '24</span>
+      <span class="tag hai">human-ai</span>
+    </span></p>
+  </div-->
+
+  <!--div class="team-member">
+    <div class="circle-img"><img src="bobalab/chelsea.jpg"></div>
+    <p>Chelsea Choo
+      <span class="tags">
+      <span class="tag ug">haas/ds '26</span>
+      <span class="tag gig">future of work</span>
+    </span></p>
+  </div-->
+
+    <!--div class="team-member">
+      <div class="circle-img"><img src="bobalab/marcus.png"></div>
+      <p><a href="https://www.linkedin.com/in/marcusyc/" class="hidelink" target="_blank">Marcus Chua</a>
+        <span class="tags">
+        <span class="tag ug">ieor '25</span>
+        <span class="tag hai">human-ai</span>
+      </span></p>
+    </div-->
+
+       <div class="team-member">
+    <div class="circle-img"><img src="bobalab/william.jpg"></div>
+    <p><a href="https://www.linkedin.com/in/williamdhn" class="hidelink" target="_blank">Willaim Deng</a>
+      <span class="tags">
+      <span class="tag phd">ieor ms'26</span>
+      <span class="tag hai">human-ai</span>
+      <span class="tag gig">future of work</span>
+    </span></p>
+  </div>
+
+    <!--div class="team-member">
+      <div class="circle-img"><img src="bobalab/boris.png"></div>
+      <p><a href="https://www.linkedin.com/in/boyu-fan-04669b22b/" class="hidelink" target="_blank">Boris Fan</a>
+        <span class="tags">
+        <span class="tag ug">ds/econ '25</span>
+        <span class="tag hai">human-ai</span>
+      </span></p>
+    </div-->
+
+    <!--div class="team-member">
+      <div class="circle-img"><img src="bobalab/ericho.jpg"></div>
+      <p>Eric Ho
+        <span class="tags">
+        <span class="tag ug">eecs '25</span>
+        <span class="tag hai">human-ai</span>
+      </span></p>
+    </div-->
+
+    <!--div class="team-member">
+      <div class="circle-img"><img src="bobalab/viviana.jpeg"></div>
+      <p>Viviana Hu
+        <span class="tags">
+        <span class="tag ug">cs '24</span>
+        <span class="tag hai">human-ai</span>
+      </span></p>
+    </div-->
+
+     <div class="team-member">
+    <div class="circle-img"><img src="bobalab/ryanjesubalan.jpg"></div>
+    <p><a href="https://www.linkedin.com/in/ryanjesubalan" class="hidelink" target="_blank">Ryan Jesubalan</a>
+      <span class="tags">
+      <span class="tag ug">applied math/ds '27</span>
+      <span class="tag gig">future of work</span>
+    </span></p>
+  </div>
+
+  <div class="team-member">
+    <div class="circle-img"><img src="https://media.licdn.com/dms/image/v2/D5603AQFi1mtfClnGcg/profile-displayphoto-crop_800_800/B56ZwbPUTZKYAM-/0/1769983529955?e=1773273600&v=beta&t=cFBjtIyY8gsYqgJUHUyz0HVME7iq60xAPwQ5Dk-EgWw"></div>
+     <p><a class="hidelink" target="_blank" href="https://www.linkedin.com/in/jiangshunan">Shunan Jiang</a>
+       <span class="tags">
+        <span class="tag phd">google</span>
+        <span class="tag phd">ieor phd '25</span>
+        <span class="tag gig">future of work</span>
+      </span></p>
+   </div>
+
+   <div class="team-member">
+    <div class="circle-img"><img src="bobalab/chelseak.JPG"></div>
+    <p><a href=" https://www.linkedin.com/in/chelsea-k-a1782432b/" class="hidelink" target="_blank">Chelsea Kawamura</a>
+      <span class="tags">
+      <span class="tag ug">isf '25</span>
+      <span class="tag gig">future of work/span>
+    </span></p>
+  </div>
+
+   <!--div class="team-member">
+     <div class="circle-img"><img src="bobalab/nahyun.JPG"></div>
+     <p><a href="https://www.linkedin.com/in/nahyun-anna-kim" class="hidelink" target="_blank">Nahyun Kim</a>
+       <span class="tags">
+       <span class="tag phd">penn phd '29</span>
+       <span class="tag gig">future of work</span>
+     </span></p>
+   </div-->
+
+   <div class="team-member">
+    <div class="circle-img"><img src="bobalab/marcuskoh.jpg"></div>
+    <p><a href="https://www.linkedin.com/in/marcus-koh05" class="hidelink" target="_blank">Marcus Koh</a>
+      <span class="tags">
+      <span class="tag ug">physics '27</span>
+      <span class="tag hai">human-ai</span>
+    </span></p>
+  </div>
+
+   <!--div class="team-member">
+     <div class="circle-img"><img src="bobalab/edward.png"></div>
+     <p><a href="https://www.linkedin.com/in/edwardneolee/" class="hidelink" target="_blank">Edward Lee</a>
+       <span class="tags">
+       <span class="tag ug">eecs '25</span>
+       <span class="tag hai">human-ai</span>
+     </span></p>
+   </div-->
+
+   <!--div class="team-member">
+     <div class="circle-img"><img src="bobalab/jake.jpeg"></div>
+     <p><a href="https://www.linkedin.com/in/jake-mok/" class="hidelink" target="_blank">Jake Mok</a>
+       <span class="tags">
+       <span class="tag ug">cs '25</span>
+       <span class="tag hai">human-ai</span>
+     </span></p>
+   </di-->
+
+   <!--div class="team-member">
+     <div class="circle-img"><img src="bobalab/jessica.jpeg"></div>
+     <p><a href="https://www.linkedin.com/in/jessicang1212/" class="hidelink" target="_blank">Jessica Ng</a>
+       <span class="tags">
+       <span class="tag ug">cs '26</span>
+       <span class="tag gig">future of work</span>
+     </span></p>
+   </div-->
+
+   <div class="team-member">
+    <div class="circle-img"><img src="bobalab/clinton.jpg"></div>
+    <p><a href="https://minticlinti.github.io/" class="hidelink" target="_blank">Clinton Nguyen</a>
+      <span class="tags">
+      <span class="tag ug">statistics '28</span>
+      <span class="tag gig">future of work</span>
+    </span></p>
+  </div>
+   
+
+   <!--div class="team-member">
+    <div class="circle-img"><img src="bobalab/tam.jpeg"></div>
+    <p><a href="https://www.linkedin.com/in/phudish-prateepamornkul/" class="hidelink" target="_blank">Tam Prateepamornkul</a>
+      <span class="tags">
+      <span class="tag phd">stats ms '24</span>
+      <span class="tag hai">human-ai</span>
+    </span></p>
+  </div-->
+
+   <!--div class="team-member">
+     <div class="circle-img"><img src="bobalab/anish.jpg"></div>
+     <p><a href="https://www.linkedin.com/in/anish-sasanur" class="hidelink" target="_blank">Anish Sasanur</a>
+       <span class="tags">
+       <span class="tag ug">eecs '26</span>
+       <span class="tag hai">human-ai</span>
+       <span class="tag lead">team lead</span>
+     </span></p>
+   </div-->
+
+    <!--div class="team-member">
+    <div class="circle-img"><img src="bobalab/theo.jpg"></div>
+    <p><a href="https://www.linkedin.com/in/theosohn/" class="hidelink" target="_blank">Theo Sohn</a>
+      <span class="tags">
+      <span class="tag ug">ieor/cs '28</span>
+      <span class="tag hai">human-ai</span>
+    </span></p>
+  </div-->
+
+   <!--div class="team-member">
+     <div class="circle-img"><img src="bobalab/danica.jpg"></div>
+     <p><a href="https://www.linkedin.com/in/danica-t" class="hidelink" target="_blank">Danica Tang</a>
+       <span class="tags">
+       <span class="tag ug">cs '25</span>
+       <span class="tag hai">human-ai</span>
+     </span></p>
+   </div-->
+
+   <!--div class="team-member">
+     <div class="circle-img"><img src="bobalab/amy.jpg"></div>
+     <p>Amy Tran
+       <span class="tags">
+       <span class="tag ug">ds '27</span>
+       <span class="tag hai">human-ai</span>
+     </span></p>
+   </div-->
+
+   <div class="team-member">
+    <div class="circle-img"><img src="bobalab/aarontu.jpg"></div>
+    <p><a href="https://www.linkedin.com/in/aarontu2006" class="hidelink" target="_blank">Aaron Tu</a>
+      <span class="tags">
+      <span class="tag ug">math '28</span>
+      <span class="tag hai">human-ai</span>
+      <span class="tag gig">future of work</span>
+    </span></p>
+  </div>
+
+   <!--div class="team-member">
+     <div class="circle-img"><img src="bobalab/ron.jpg"></div>
+     <p><a href="https://www.ronyw.com/" class="hidelink" target="_blank">Ron Wang</a>
+       <span class="tags">
+       <span class="tag ug">cs '24</span>
+       <span class="tag hai">human-ai</span>
+       <span class="tag lead">team lead</span>
+     </span></p>
+   </div-->
+
+         <!--div class="team-member">
+           <div class="circle-img"><img src="bobalab/brandonwong.png"></div>
+           <p><a href="https://brandogn.com/" class="hidelink" target="_blank">Brandon Wong</a>
+             <span class="tags">
+             <span class="tag ug">cs '25</span>
+             <span class="tag gig">future of work</span>
+           </span></p>
+         </div-->
+
+         <!--div class="team-member">
+           <div class="circle-img"></div>
+           <p><a href="https://www.linkedin.com/in/chloe-wong-sy/" class="hidelink" target="_blank">Chloe Wong</a>
+             <span class="tags">
+             <span class="tag ug">cs/ds '26</span>
+             <span class="tag hai">human-ai</span>
+           </span></p>
+         </div-->
+
+         <!--div class="team-member">
+           <div class="circle-img"></div>
+           <p><a href="https://www.linkedin.com/in/cheuk-ki-wong-90b65522a/" class="hidelink" target="_blank">Cheuk Ki (Jacky) Wong</a>
+             <span class="tags">
+             <span class="tag ug">eecs '25</span>
+             <span class="tag hai">human-ai</span>
+           </span></p>
+         </div-->
+
+         <!--div class="team-member">
+           <div class="circle-img"><img src="bobalab/yutong.jpg"></div>
+           <p><a href="https://github.com/cnfionawu" class="hidelink" target="_blank">Yutong Wu</a>
+             <span class="tags">
+             <span class="tag ug">cs/cogsci '25</span>
+             <span class="tag gig">future of work</span>
+           </span></p>
+         </div-->
+
+         <!--div class="team-member">
+          <div class="circle-img"><img src="bobalab/thomas.JPG"></div>
+          <p><a href="https://tyeoh9.github.io/tyeoh/" class="hidelink" target="_blank">Thomas Yeoh</a>
+            <span class="tags">
+            <span class="tag ug">eecs '25</span>
+            <span class="tag hai">future of work</span>
+          </span></p>
+        </div-->
+
+        <!--div class="team-member">
+    <div class="circle-img"><img src="bobalab/zimu.jpg"></div>
+    <p><a href="https://www.linkedin.com/in/zimu-wang-32b62a289/" class="hidelink" target="_blank">Zimu Wang</a>
+      <span class="tags">
+      <span class="tag ug">cs '27</span>
+      <span class="tag hai">human-ai</span>
+      <span class="tag gig">future of work</span>
+    </span></p>
+  </div-->
+
+           <div class="team-member">
+    <div class="circle-img"><img src="bobalab/ryanxu.jpg"></div>
+    <p><a href="https://www.linkedin.com/in/ryan-xu-y/" class="hidelink" target="_blank">Ryan Xu</a>
+      <span class="tags">
+      <span class="tag ug">ds/applied math '27</span>
+      <span class="tag hai">human-ai</span>
+    </span></p>
+  </div>
+
+           <div class="team-member">
+    <div class="circle-img"><img src="bobalab/hannahyu.jpeg"></div>
+    <p><a href="https://www.linkedin.com/in/hannah-k-yu" class="hidelink" target="_blank">Hannah Yu</a>
+      <span class="tags">
+      <span class="tag ug">applied math/cs '27</span>
+      <span class="tag hai">human-ai</span>
+      <span class="tag gig">future of work</span>
+    </span></p>
+  </div>
+
+             <div class="team-member">
+    <div class="circle-img"><img src="bobalab/eddie.jpg"></div>
+    <p><a href="https://www.linkedin.com/in/ezhang345" class="hidelink" target="_blank">Eddie Zhang</a>
+      <span class="tags">
+      <span class="tag ug">applied math '27</span>
+      <span class="tag hai">human-ai</span>
+    </span></p>
+  </div>
+
+   <div class="team-member">
+     <div class="circle-img"><img src="https://lsa.umich.edu/content/michigan-lsa/econ/en/people/phd-students/austiz/jcr:content/profileImage.transform/profile_portrait/image.jpg"></div>
+     <p><a href="https://lsa.umich.edu/econ/people/phd-students/austiz.html" class="hidelink" target="_blank">Austin Zhu</a>
+       <span class="tags">
+        <span class="tag phd">umich phd</span>
+       <span class="tag ug">econ '25</span>
+       <span class="tag gig">future of work</span>
+     </span></p>
+   </div>
+
+
+   <!--div class="team-member">
+     <div class="circle-img"><img src="https://media.licdn.com/dms/image/C4D03AQFxuq7TVQB-Ug/profile-displayphoto-shrink_800_800/0/1573765617254?e=2147483647&v=beta&t=FSOT8PKMa33n3nbp-8FA_CcVv9xEesghgZA6T3HPsq0"></div>
+     <p>Yuanrui (Jerry) Zhu
+       <span class="tags">
+       <span class="tag ug">cs/ds '23</span>
+       <span class="tag hai">human-ai</span>
+       <span class="tag lead">team lead</span>
+     </span></p>
+   </div-->
+
+
+</div>
+
+
+<h4>Selected Alumni</h4>
+<p><u>Berkeley:</u> 
+  Lawrence Chen '25, 
+  Chelsea Kawamura '25 <small><em>(University of Edinburgh)</em></small>, 
+  Brandon Chin '25, 
+  <a class="hidelink" target="_blank" href="https://www.linkedin.com/in/jiangshunan">Shunan Jiang PhD'25</a> <small><em>(Google Research)</em></small>, 
+  Edward Lee '25,
+  <a class="hidelink" target="_blank" href="https://www.linkedin.com/in/yutong-wu-85a68b24b/">Yutong Wu '25</a> <small><em>(Computer & Information Science MS at Penn)</em></small>, 
+  <a class="hidelink" target="_blank" href="https://tyeoh9.github.io/tyeoh/">Thomas Yeoh '25</a> <small><em>(Computer Science MS at UC Irvine)</em></small>, 
+  <a class="hidelink" target="_blank" href="https://lsa.umich.edu/econ/people/phd-students/austiz.html">Austin Zhu '25</a> <small><em>(Economics PhD at Michigan)</em></small>, 
+  <a class="hidelink" target="_blank" href="https://www.linkedin.com/in/kristin-chennuo/">Kristin Chen '24</a> <small><em>(Master in Finance at UChicago)</em></small>, 
+  Serena Gu '24 <small><em>(Computer & Information Science MS at Penn)</em></small>, 
+  <a class="hidelink" target="_blank" href="https://www.matthewlee.xyz/">Matthew Lee '24</a> <small><em>(Computer Science MS at Stanford)</em></small>, 
+  Ron Wang <small><em>(Computer Science MS at Stanford)</em></small>, 
+  Jerry Zhu <small><em>(Machine Learning & Data Science MS at Northwestern)</em></small>, 
+  Jacky Kwok '23 <small><em>(Computer Science PhD at Stanford)</em></small>, 
+  <a href="https://www.linkedin.com/in/laura-li17" target="_blank">Laura Li '23</a> <small><em>(Master in Business Analytics at MIT)</em></small>, 
+  Nicole Liu '23 <small><em>(Master in Public Health at Berkeley)</em></small>, 
+  <a href="https://www.linkedin.com/in/mingyuan-ma-679bb8197" target="_blank">Mingyuan (Jeremy) Ma '23</a> <small><em>(Data Science MS at Harvard)</em></small>, Nick Melamed '23 <small><em>(Data Science MS at Berkeley)</em></small>, 
+  Ethan Wang '23 <small><em>(Data Science MS at Berkeley)</em></small>, 
+  Kareena Wu '23 <small><em>(McKinsey)</em></small>, 
+  <a href="https://www.linkedin.com/in/stephenyangjz" target="_blank">Stephen Yang '23</a> <small><em>(Computational Science & Engineering MS at Harvard)</em></small>
+</p><br>
+
+<p><u>Others</u> <a href="https://oid.wharton.upenn.edu/profile/nahyunk/" target="_blank">Na Hyun Kim '24</a><small><em>(Operations, Information & Decisions PhD at Wharton)</em></small>, <a href="https://www.hbs.edu/faculty/Pages/profile.aspx?facId=1460119" target="_blank">Lorry Wu '23</a> <small><em>(Technology & Operations Management PhD at Harvard)</em></small>, Stephen Lin '22 <small><em>(Behavioral & Decision Sciences MS at Penn)</em></small>, <a href="https://www.linkedin.com/in/yuanxin-zhu-202410221" target="_blank">Canary Zhu ’21</a> <small><em>(Information Systems & Management PhD at CMU)</em></small>
+</p>
+
+
+
+    
+          <hr>
+    </div>
+
+    <a class="anchor" id="otherworks"></a>
+          <h3>Other Works</h3>
+          <br>
+          <a class="anchor" id="mental"></a>
+          <h4>Student Mentorship and Student Mental Health/Suicide Prevention</h4>
+          <div class="full-only">
+          <p>Since Fall 2024, I have been serving as a <a href src="https://reslife.berkeley.edu/academics/resident-faculty-program/" class="hidelink" target="_blank">Resident Faculty</a> at UC Berkeley. My signature event series is called <b>How It's Possible with Park</b>, where I take students to see behind-the-scene operations at various organizations, from a chocolate factory to a tofu factory to a musical production. 
+                        <br><br>
+          </div>
+            During PhD, I have served as a <a href="https://www.collegehouses.upenn.edu/join/ga" target="_blank">Graduate Associate</a> at Penn's <a href="http://stouffer.house.upenn.edu/" target="_blank">Stouffer College House</a> since 2017, where I provide academic, social, and mental support to resident undergraduate students. My in-house programs emphasize fostering a strong, supportive, and inclusive community and enhancing student wellness. I received the <a>Excellence in Student and Community Engagement Award</a> in 2019 for this role. I have also collaborated with the <a href="https://policylab.chop.edu/" target="_blank">Children's Hospital of Philadelphia</a> on their work to prevent suicide among pediatric patients. We interviewed patients, families, and healthcare providers to identify care process improvements that may reduce suicides <small>(joint work with <a href="https://policylab.chop.edu/people/cadence-bowden" target="_blank">Cadence Bowden</a> and <a href="https://cpce.research.chop.edu/about-us/team-members/stephanie-doupnik-md-mshp" target="_blank">Stephanie Doupnik, MD</a>)</small>.</p>
+          <!--  I am currently focusing on team dynamics and information sharing among providers and their impact of care quality. -->
+          <div class="media">
+          <img height="315" src="./files/stouffer1.jpg"></img>
+          <img height="315" src="./files/stouffer2.jpeg"></img>
+          <img height="315" src="./files/stouffer4.jpg"></img>
+          <img height="315" src="./files/stouffer3.jpeg"></img>
+          <img height="315" src="./files/stouffer5.jpeg"></img>
+          </div>
+      <br>
+
+          <a class="anchor" id="impact"></a>
+          <h4>Social Impact in Practice/Urban Planning</h4>
+          <p>As a city planning enthusiast, I always seek opportunities to make a positive social impact to the local community. Beyond my urban analytics research with the Wharton Social Impact Initiative, I have been working with <a href="https://www.design.upenn.edu/pennpraxis/home" target="_blank">PennPraxis</a> to meaningfully engage with community partners and practitioners in Philadelphia and implement community development projects. In Fall 2018, we transformed a vacant lot on the border between a residential area and a homeless encampment in Kensington <small>(<a href="https://www.nytimes.com/2018/10/10/magazine/kensington-heroin-opioid-philadelphia.html" target="_blank">"Walmart of Heroin"</a>)</small> into a beautiful green space (<em>"Tusculum Square"</em>). The lot, once filled with litter and home to illegal dumping, now stands as a welcoming space for residents and visitors. I co-wrote an article about this transformation for a city planning magazine <small>(joint work with <a href="https://www.agrittycity.com/" target="_blank">Alex Baum</a> and <a href="https://www.linkedin.com/in/mariela-hernandez-16665787/" target="_blank">Mariela Hernandez</a>)</small>.</p>
+          <p>
+          <a href="files/tusculum.pdf" class="btn btn-default" target="_blank" role="button">Memo</a>
+          <a href="https://issuu.com/pennplanning/docs/2019pano_final/136" class="btn btn-default" target="_blank" role="button">Print</a>
+          <a href="http://shiftcapital.us/project/tusculum-square/" class="btn btn-default" target="_blank" role="button">Press</a>
+          <a href="https://www.google.com/maps/place/Tusculum+Square/@39.9901951,-75.1246916,20z/data=!4m5!3m4!1s0x89c6c91a181ca00b:0xeff6f6cbc986a38c!8m2!3d39.990191!4d-75.124418" class="btn btn-default" target="_blank" role="button">Map</a>
+          </p>
+
+          <div class="media">
+          <img height="315" src="./files/tus1.jpg"></img>
+          <img height="315" src="./files/tus2.jpg"></img>
+          <img height="315" src="./files/tus3.jpg"></img>
+          <img height="315" src="./files/tus4.jpg"></img>
+          </div>
+          <br>
+
+          <a class="anchor" id="peopleanalytics"></a>
+          <h4>People Analytics</h4>
+          <p>I enjoy analyzing data on human behavior to uncover new insights (and inspire my research). One area of interest is to identify biases and discriminatory behaviors from data. In 2018, I looked into the review process for the Global Health Corps (GHC) fellowship and identified biases and disagreements among reviewers <small>(joint work with <a href="https://titipata.github.io" target="_blank">Titipat Achakulvisut</a>)</small>. Our work won the <a>Second Prize at the People Analytics Conference Case Competition</a>.</p>
+          <p>
+          <a href="files/biases.pdf" class="btn btn-default" target="_blank" role="button">Report</a>
+          <a href="files/biases-slides.pdf" class="btn btn-default" target="_blank" role="button">Slides</a>
+          <a href="https://youtu.be/OFdz_Uu48_M" class="btn btn-default" target="_blank" role="button">Video</a>
+        <div class="col-md-2">
+          </div>
+
+      <hr>
+      </div>
+
+    <!-- Scripts -->
+    <script src="files/jquery.min.js"></script>
+    <script src="files/bootstrap.min.js"></script>
+    <script src="files/sticky.min.js"></script>
+    <script src="files/main.js"></script>
+
+<script>
+  (function () {
+    function applyNames(isFull) {
+      document.title = isFull ? "Park Sinchaisri" : "Wichinpong Sinchaisri";
+      var navName = document.getElementById("nav-name");
+      if (navName) navName.textContent = "Park Sinchaisri";
+    }
+
+    function hideResidentFacultyIfLite() {
+      var headings = Array.prototype.slice.call(document.querySelectorAll("h3, h4, h5"));
+      headings.forEach(function (h) {
+        if (!/resident\s+faculty/i.test(h.textContent || "")) return;
+
+        h.style.display = "none";
+        var el = h.nextElementSibling;
+        while (el) {
+          var tag = (el.tagName || "").toUpperCase();
+          if (tag === "HR" || tag === "H3") break;
+          el.style.display = "none";
+          el = el.nextElementSibling;
+        }
+      });
+    }
+
+    function setView(isFull, opts) {
+      opts = opts || {};
+      var region = isFull ? "full" : "lite";
+      document.documentElement.setAttribute("data-region", region);
+      applyNames(isFull);
+
+      if (!isFull) hideResidentFacultyIfLite();
+
+      try {
+        if (opts.persistDetected) localStorage.setItem("viewDetected", region);
+        if (opts.persistOverride) localStorage.setItem("viewOverride", region);
+      } catch (e) {}
+    }
+
+    function clearOverride() {
+      try { localStorage.removeItem("viewOverride"); } catch (e) {}
+    }
+
+    function fetchWithTimeout(url, opts, ms) {
+      opts = opts || {};
+      ms = ms || 2000;
+
+      // cache-bust (some networks/proxies cache aggressively)
+      var sep = url.indexOf("?") >= 0 ? "&" : "?";
+      var u = url + sep + "_ts=" + Date.now();
+
+      return new Promise(function (resolve, reject) {
+        var timer = setTimeout(function () { reject(new Error("timeout")); }, ms);
+        fetch(u, opts).then(function (res) {
+          clearTimeout(timer);
+          resolve(res);
+        }).catch(function (err) {
+          clearTimeout(timer);
+          reject(err);
+        });
+      });
+    }
+
+    async function tryJSON(url, ms) {
+      var res = await fetchWithTimeout(url, { cache: "no-store", referrerPolicy: "no-referrer" }, ms);
+      return await res.json();
+    }
+
+    async function tryText(url, ms) {
+      var res = await fetchWithTimeout(url, { cache: "no-store", referrerPolicy: "no-referrer" }, ms);
+      return await res.text();
+    }
+
+    async function detectCountryCode() {
+      // Multiple providers since adblock/rate limits vary by user/network.
+      // Return "" if all fail.
+      var providers = [
+        // ipwho.is (no key) -> { success: true, country_code: "US" }
+        async function () {
+          var j = await tryJSON("https://ipwho.is/?fields=success,country_code", 2000);
+          var cc = (j && j.success && j.country_code) ? String(j.country_code).trim().toUpperCase() : "";
+          return /^[A-Z]{2}$/.test(cc) ? cc : "";
+        },
+        // geojs -> { country_code: "US", ... }
+        async function () {
+          var j = await tryJSON("https://get.geojs.io/v1/ip/geo.json", 2000);
+          var cc = (j && j.country_code) ? String(j.country_code).trim().toUpperCase() : "";
+          return /^[A-Z]{2}$/.test(cc) ? cc : "";
+        },
+        // ipapi.co json -> { country: "US", ... }
+        async function () {
+          var j = await tryJSON("https://ipapi.co/json/", 2500);
+          var cc = (j && j.country) ? String(j.country).trim().toUpperCase() : "";
+          return /^[A-Z]{2}$/.test(cc) ? cc : "";
+        },
+        // ipapi.co text -> "US"
+        async function () {
+          var t = await tryText("https://ipapi.co/country/", 2500);
+          var cc = String(t || "").trim().toUpperCase();
+          return /^[A-Z]{2}$/.test(cc) ? cc : "";
+        }
+      ];
+
+      for (var i = 0; i < providers.length; i++) {
+        try {
+          var cc = await providers[i]();
+          if (cc) return cc;
+        } catch (e) {}
+      }
+      return "";
+    }
+
+    (async function () {
+      // Keep your current default behavior: fuller view until compact view is detected
+      applyNames(true);
+
+      // 1) Manual override via query param for testing:
+      //    ?view=full | ?view=lite | ?view=auto
+      var params = new URLSearchParams(window.location.search);
+      var qp = (params.get("view") || params.get("region") || "").toLowerCase();
+
+      if (qp === "full" || qp === "lite" || qp === "us" || qp === "nonus" || qp === "th" || qp === "nonth") {
+        var normalized = (qp === "us" || qp === "nonth" || qp === "full") ? "full" : "lite";
+        setView(normalized === "full", { persistOverride: true, persistDetected: true });
+        return;
+      }
+      if (qp === "auto") {
+        clearOverride();
+      }
+
+      // 2) Persisted override (highest priority)
+      try {
+        var override = localStorage.getItem("viewOverride");
+        if (override === "full" || override === "lite") {
+          setView(override === "full", { persistDetected: true });
+          return;
+        }
+      } catch (e) {}
+
+      // 3) IP-based detection (best effort on static hosting)
+      var cc = await detectCountryCode();
+      var isLiteRegion = (cc === "TH");
+
+      var isFull = !isLiteRegion;
+
+      // 4) Optional fallback when IP APIs are blocked:
+      // If we cannot detect country at all, use timezone as a weak hint for the compact view.
+      if (!cc) {
+        try {
+          var tz = (Intl.DateTimeFormat().resolvedOptions().timeZone || "");
+          if (tz === "Asia/Bangkok") isFull = false;
+        } catch (e) {}
+      }
+
+      setView(isFull, { persistDetected: true });
+    })();
+  })();
+</script>
+
+  </div>
+</body>
+</html>
