@@ -294,6 +294,12 @@
 
           <!-- Wrapped your dt/dd items in a dl to keep layout consistent -->
           <dl class="row">
+            <dt class="col-sm-2"><h4>4/16/26</h4></dt>
+            <dd class="col-sm-10">Our paper <i>Precise or Broad</i> received a Major Revision from <b>Manufacturing & Service Operations Management</b></a>!</dd>
+
+            <dt class="col-sm-2"><h4>4/10/26</h4></dt>
+            <dd class="col-sm-10">I am honored to win (for the second time!) the <a class="hidelink2" target="_blank" href="https://haas.berkeley.edu/faculty-research/teaching-awards/">Earl F. Cheit Award For Excellence In Teaching</a>!</dd>
+
             <dt class="col-sm-2"><h4>7/31/25</h4></dt>
             <dd class="col-sm-10">Our paper <i>Learning on the Go</i> is accepted for the <a class="hidelink2" target="_blank" href="https://cscw.acm.org/2025/">28th ACM SIGCHI Conference on Computer-Supported Cooperative Work & Social Computing (CSCW) in Bergen, Norway</a>!</dd>
 
@@ -347,9 +353,9 @@
               <li class=""><a href="#chatgpt">- ChatGPT for Education</a></li>
               <li class=""><a href="#giglearning">- Gig Workers' Learning</a></li>
               <li class=""><a href="#working">Working Papers</a></li>
+              <li class=""><a href="#driving">- AI Advice Precision</a></li>
               <li class=""><a href="#markdown">- Behavioral Markdown Pricing</a></li>
               <li class=""><a href="#structural">- Manage Multihoming Workers</a></li>
-              <li class=""><a href="#driving">- AI Advice Precision</a></li>
               <li class=""><a href="#backward">- GenAI & Productivity</a></li>
               <li class=""><a href="#strategicadvice">- Enterprise vs Personal AIs</a></li>
               <li class=""><a href="#armagency">- Bandits w/ Arm Agency</a></li>
@@ -510,7 +516,30 @@
         <h3>Working Papers</h3>
         <br>
 
-        <a class="anchor" id="markdown"></a>
+        <a class="anchor" id="driving"></a>
+        <h4>Precise or Broad? Designing Algorithmic Advice for Learning in Sequential Decision Making</h4>
+        with <a class="hidelink" target="_blank" href="https://pblaettchen.com/">Philippe Blaettchen</a><br>
+        <p class="mb-0"><em>Major Revision at <b>Manufacturing & Service Operations Management</b></em>
+        <br> 
+          <i class="fas fa-award"></i><a class="lowkey"> Accepted to the 2025 CHI Workshop on Human-AI Interaction for Augmented Reasoning</a><br>
+          <i class="fas fa-award"></i><a class="lowkey"> Accepted to the 2025 EC Workshop on Human-AI Collaboration</a><br>
+          <i class="fas fa-award"></i><a class="lowkey"> Berkeley AI Research Commons Grant, 2021</a><br>
+          <i class="fas fa-award"></i><a class="lowkey"> Center for Growth Markets Research Grant, 2022</a>
+        </p>
+        <p>
+          <a class="btn btn-default" data-toggle="collapse" href="#abstractev" role="button" aria-expanded="false" aria-controls="collapseExample">abstract</a>
+        </p>
+        <div class="collapse" id="abstractev">
+          <div class="card card-body">
+            <blockquote class="blockquote">
+              Organizations increasingly deploy algorithmic tools to support complex operational decisions, raising a practical design question: how should these tools be built when designers care not only about immediate performance, but also about preserving and building human skill that remains valuable when advice is unavailable, imperfect, or requires genuine oversight? We study how the \emph{precision} of algorithmic advice shapes this trade-off. We develop a stylized model of advice-taking and learning. The model characterizes a reward-learning frontier: precise, action-level advice is easier to implement and improves payoffs while available through higher compliance, whereas broad, strategic advice requires interpretation, induces greater exploration, and generates knowledge that is portable, even when decision environments differ. We test the model's predictions in two online experiments in an electric-vehicle routing and charging task, representing typical characteristics of sequential decision tasks. Consistent with the theory, precise numerical advice delivers the strongest gains during the advice phase, whereas broader advice can yield more robust performance after advice is removed, specifically if the new environment differs substantially, but not completely. We use inverse reinforcement learning to recover interpretable latent objective components from action traces, distinguishing transient compliance from persistent internalization. Our results provide design guidance for advice systems that balance short-run operational efficiency with the development of long-run human capability. They also help validate inverse reinforcement learning as an effective tool for estimating human behaviors in complex sequential tasks.
+            </blockquote>
+          </div>
+        </div>
+
+        <hr>
+
+       <a class="anchor" id="markdown"></a>
         <h4>Markdown Pricing with Quality Perception</h4>
         with <a class="hidelink" target="_blank" href="https://www.mcgill.ca/desautels/rim-hariss">Rim Hariss</a>, <a class="hidelink" target="_blank" href="https://mitmgmtfaculty.mit.edu/gperakis/">Georgia Perakis</a>, and <a class="hidelink" target="_blank" href="https://mitmgmtfaculty.mit.edu/yanchong/">Y. Karen Zheng</a><br>
         <p class="mb-0"><em>Major Revision (2nd Round) at <b>Manufacturing & Service Operations Management</b></em>
@@ -532,7 +561,7 @@
         <a class="anchor" id="structural"></a>
         <h4>Managing Multihoming Workers in the Gig Economy</h4>
         <p class="mb-0">with <a class="hidelink" target="_blank" href="https://oid.wharton.upenn.edu/profile/gadallon/">Gad Allon</a>, <a class="hidelink" target="_blank" href="https://maxccohen.github.io/">Maxime Cohen</a>, and <a class="hidelink" target="_blank" href="https://oid.wharton.upenn.edu/profile/kenmoon/">Ken Moon</a></p>
-        <p class="mb-0"><em>Submitted</em><br>
+        <p class="mb-0"><em>Submitted to <b>Operations Research</b></em><br>
           <i class="fas fa-award"></i><a class="lowkey"> 2nd Place, INFORMS TIMES Best Working Paper Award, 2024</a><br>
           <i class="fas fa-award"></i><a class="lowkey"> Accepted to the 2023 MSOM Service Management SIG</a><br>
           <i class="fas fa-award"></i><a class="lowkey"> Spotlight Presentation at the 2022 INFORMS RMP Conference</a><br>
@@ -549,28 +578,6 @@
           <div class="card card-body">
             <blockquote class="blockquote">
               Gig economy platforms increasingly compete to source labor from common pools of multihoming workers, who dynamically allocate their services between competing platforms. Therefore, the question of how platforms can design pay and other levers to attract labor has gained significance. However, standard gig economy data are often incomplete from a choice modeling perspective, which impedes platforms' understanding of workers' multihoming preferences and choices. We study this problem using data shared by a major ride-hailing platform integrated with public data revealing the drivers' outside options in NYC. We structurally estimate a dynamic work-or-switch model using a novel combination of simulation and adversarial machine learning to overcome the empirical problem of contextually incomplete choice data. We find drivers to be significantly focused on short-horizon intraday payoffs while displaying significant heterogeneity in their costs of working. We offer prescriptions for platforms based on counterfactual analyses. We find that at a fixed labor cost, offering dynamic but guaranteed hourly pay rates can increase labor capacity over paying workers on a per-trip basis. A substantial segment of drivers are rarely observed to use pay-per-work platforms and would demand substantially increased compensation to accept that mode of pay. Next, we conduct a counterfactual policy exercise based on New York City's Driver Income Rules; this out-of-sample exercise validates recent empirical studies showing that higher posted pay worsens congestion while achieving muted gains in realized earnings. As alternative levers, platforms can reduce multihoming via offering streak bonuses, but impeding quits induces drivers to switch earlier to other platforms. Overall, managing multihoming requires aligning pay timing with workers' decision horizons, and instituting wage floors requires complementary measures to manage increased congestion.
-            </blockquote>
-          </div>
-        </div>
-
-        <hr>
-
-        <a class="anchor" id="driving"></a>
-        <h4>Precise or Broad? Designing Algorithmic Advice for Learning in Sequential Decision Making</h4>
-        with <a class="hidelink" target="_blank" href="https://pblaettchen.com/">Philippe Blaettchen</a>
-        <p class="mb-0">
-          <i class="fas fa-award"></i><a class="lowkey"> Accepted to the 2025 CHI Workshop on Human-AI Interaction for Augmented Reasoning</a><br>
-          <i class="fas fa-award"></i><a class="lowkey"> Accepted to the 2025 EC Workshop on Human-AI Collaboration</a><br>
-          <i class="fas fa-award"></i><a class="lowkey"> Berkeley AI Research Commons Grant, 2021</a><br>
-          <i class="fas fa-award"></i><a class="lowkey"> Center for Growth Markets Research Grant, 2022</a>
-        </p>
-        <p>
-          <a class="btn btn-default" data-toggle="collapse" href="#abstractev" role="button" aria-expanded="false" aria-controls="collapseExample">abstract</a>
-        </p>
-        <div class="collapse" id="abstractev">
-          <div class="card card-body">
-            <blockquote class="blockquote">
-              Organizations increasingly deploy algorithmic tools to support complex operational decisions, raising a practical design question: how should these tools be built when designers care not only about immediate performance, but also about preserving and building human skill that remains valuable when advice is unavailable, imperfect, or requires genuine oversight? We study how the \emph{precision} of algorithmic advice shapes this trade-off. We develop a stylized model of advice-taking and learning. The model characterizes a reward-learning frontier: precise, action-level advice is easier to implement and improves payoffs while available through higher compliance, whereas broad, strategic advice requires interpretation, induces greater exploration, and generates knowledge that is portable, even when decision environments differ. We test the model's predictions in two online experiments in an electric-vehicle routing and charging task, representing typical characteristics of sequential decision tasks. Consistent with the theory, precise numerical advice delivers the strongest gains during the advice phase, whereas broader advice can yield more robust performance after advice is removed, specifically if the new environment differs substantially, but not completely. We use inverse reinforcement learning to recover interpretable latent objective components from action traces, distinguishing transient compliance from persistent internalization. Our results provide design guidance for advice systems that balance short-run operational efficiency with the development of long-run human capability. They also help validate inverse reinforcement learning as an effective tool for estimating human behaviors in complex sequential tasks.
             </blockquote>
           </div>
         </div>
@@ -662,17 +669,17 @@
 
         <a class="anchor" id="ryanj"></a>
         <h4>Learning Across Jobs</h4>
-        with <a class="hidelink" target="_blank" href="">Ryan Jesubalan</a>
+        with <a class="hidelink" target="_blank" href="https://www.linkedin.com/in/ryanjesubalan">Ryan Jesubalan</a>
         <p><br></p>
 
         <a class="anchor" id="yixiang"></a>
         <h4>Experimentation without Experiments</h4>
-        with Xinwei Chen, Xiexin Liu, Yixiang Xu
+        with Xinwei Chen, Xiexin Liu, <a class="hidelink" target="_blank" href="https://www.yixiangxu.com/">Yixiang Xu</a>
         <p><br></p>
 
         <a class="anchor" id="yixiang"></a>
         <h4>Fruits of Labor</h4>
-        with Jerry Anunrojwong
+        with <a class="hidelink" target="_blank" href="https://jerryanunroj.github.io/">Jerry Anunrojwong</a>
         <p><br></p>
     <hr>
 
