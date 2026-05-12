@@ -298,10 +298,12 @@
           <!-- Wrapped your dt/dd items in a dl to keep layout consistent -->
 
           <dl class="row">
-            <dt class="col-sm-2"><h4>5/8/26</h4></dt>
-            <dd class="col-sm-10">Our paper <i>Compliance-Aware Reinforcement Learning (CARL)</i> is selected for presentation at <b>the 2026 INFORMS MSOM Conference</b> in Boston and <b>the 2016 INFORMS Revenue Management and Pricing (RMP) Section Conference</b> in Ann Arbor!</dd>
+             <dt class="col-sm-2"><h4>5/11/26</h4></dt>
+            <dd class="col-sm-10">Our paper <i>Learning to Gig</i> received a Major Revision from <b>Manufacturing & Service Operations Management</b></a>!</dd>
 
-          <dl class="row">
+            <dt class="col-sm-2"><h4>5/8/26</h4></dt>
+            <dd class="col-sm-10">Our papers <i>Compliance-Aware Reinforcement Learning, Strategic Advice in the Age of Personal AI,</i> and <i>Planning vs Execution AI</i> are selected for presentation at <b>the 2026 MSOM Conference</b> in Boston!</dd>
+
             <dt class="col-sm-2"><h4>4/16/26</h4></dt>
             <dd class="col-sm-10">Our paper <i>Precise or Broad</i> received a Major Revision from <b>Manufacturing & Service Operations Management</b></a>!</dd>
 
@@ -364,9 +366,9 @@
               <li class=""><a href="#driving">- AI Advice Precision</a></li>
               <li class=""><a href="#markdown">- Behavioral Markdown Pricing</a></li>
               <li class=""><a href="#structural">- Manage Multihoming Workers</a></li>
+              <li class=""><a href="#learningtogig">-Learning to Gig</a></li>
               <li class=""><a href="#backward">- GenAI & Productivity</a></li>
               <li class=""><a href="#strategicadvice">- Enterprise vs Personal AIs</a></li>
-              <li class=""><a href="#armagency">- Bandits w/ Arm Agency</a></li>
               <li class=""><a href="#nonadoption">- Tip Non-Adoption</a></li>
               <li class=""><a href="#workinprogress">Work in Progress</a></li>
 
@@ -705,9 +707,40 @@
 
         <hr>
 
+        <a class="anchor" id="learningtogig"></a>
+        <h4>Learning to Gig: Workforce Development under Worker Agency</h4>
+        <p class="mb-0">with <a class="hidelink" target="_blank" href="https://www.linkedin.com/in/williamdhn/">Haonan Deng</a>, <a class="hidelink" target="_blank" href="https://www.linkedin.com/in/jiangshunan">Shunan Jiang</a>, <a class="hidelink" target="_blank" href="https://www.linkedin.com/in/xinpeng-qu-377219273/">Xinpeng Qu</a></p>
+         <p class="mb-0"><em>Major Revision at <b>Manufacturing & Service Operations Management</b></em>
+        <br> 
+        <p>
+          <a class="btn btn-default" data-toggle="collapse" href="#abstractarmagency" role="button" aria-expanded="false" aria-controls="collapseExample">abstract</a>
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5387320" class="btn btn-default" target="_blank" role="button">SSRN [Aug 2025]</a>
+          <a class="btn btn-default" data-toggle="collapse" href="#bibarmagency" role="button" aria-expanded="false" aria-controls="collapseExample">BibTeX</a>
+        </p>
+        <div class="collapse" id="abstractarmagency">
+          <div class="card card-body">
+            <blockquote class="blockquote">
+              Gig platforms must coordinate flexible workforces they cannot command. Workers may accept or reject job offers, and their performance improves through learning-by-doing. These features create a central operational tension: platforms must meet current demand while also developing future workforce capability. We study this problem in a model where the platform recommends each job to a batch of workers, workers accept stochastically based on current skill, and assigned workers improve through experience along heterogeneous learning curves with unknown potential. We first show that the fully optimal dynamic policy is computationally intractable and too demanding to serve as a practical benchmark for online learning. We therefore introduce a tractable dynamic clairvoyant benchmark, the finite-horizon planning oracle (FHPO), which anticipates workers' hidden potential and  evaluates them using an index that interpolates between their current quality and long-run potential. Then we develop OUCB, an optimistic learning algorithm that balances exploration and exploition, which achieves sublinear regret with respect to this robust clairvoyant benchmark. And we also design SafeOUCB, adding explicit control of market-failure risk. Using data from a major U.S. retail delivery platform covering 1.2 million completed jobs and 5,386 workers, we document pronounced learning curves, substantial heterogeneity in worker potential, and systematic differences in how acceptance changes with skill. In calibrated counterfactual experiments, learning-aware dispatch improves cumulative platform utility by 2--3\% relative to an empirical myopic benchmark while concentrating work among systematically higher-quality workers and maintaining low market-failure rates.
+            </blockquote>
+          </div>
+        </div>
+                <div class="collapse" id="bibarmagency">
+          <div class="card card-body">
+            <blockquote class="blockquote">
+             @article{deng2026learning,
+  title={Learning to Gig: Workforce Development under Worker Agency},
+  author={Deng, Haonan and Jiang, Shunan and Qu, Xinpeng and Sinchaisri, Wichinpong Park},
+  journal={Available at SSRN 5387320},
+  year={2026}}
+            </blockquote>
+          </div>
+        </div>
+
+        <hr>
+
         <a class="anchor" id="backward"></a>
         <h4>The Teacher's Knapsack: Generative AI and Teacher Productivity</h4>
-        <p class="mb-0">(Previous title: Backwards Planning with Generative AI: Case Study Evidence from full-view K12 Teachers)</p>
+        <p class="mb-0"><i><small>(Previous title: Backwards Planning with Generative AI: Case Study Evidence from full-view K12 Teachers)</small></i></p>
         <p class="mb-0">with <a class="hidelink" target="_blank" href="http://www.samanthakeppler.com/">Samantha Keppler</a> and <a class="hidelink" target="_blank" href="https://claresny.github.io/">Clare Snyder</a></p>
         <p>
           <a class="btn btn-default" data-toggle="collapse" href="#abstractbackward" role="button" aria-expanded="false" aria-controls="collapseExample">abstract</a>
@@ -757,35 +790,6 @@
   title={Strategic Advice in the Age of Personal AI},
   author={Liu, Yueyang and Sinchaisri, Wichinpong Park},
   journal={arXiv preprint arXiv:2603.02055},
-  year={2026}}
-            </blockquote>
-          </div>
-        </div>
-
-        <hr>
-
-        <a class="anchor" id="armagency"></a>
-        <h4>Learning to Gig: Workforce Development under Worker Agency</h4>
-        <p class="mb-0">with <a class="hidelink" target="_blank" href="https://www.linkedin.com/in/williamdhn/">Haonan Deng</a>, <a class="hidelink" target="_blank" href="https://www.linkedin.com/in/jiangshunan">Shunan Jiang</a>, <a class="hidelink" target="_blank" href="https://www.linkedin.com/in/xinpeng-qu-377219273/">Xinpeng Qu</a></p>
-        <p>
-          <a class="btn btn-default" data-toggle="collapse" href="#abstractarmagency" role="button" aria-expanded="false" aria-controls="collapseExample">abstract</a>
-          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5387320" class="btn btn-default" target="_blank" role="button">SSRN [Aug 2025]</a>
-          <a class="btn btn-default" data-toggle="collapse" href="#bibarmagency" role="button" aria-expanded="false" aria-controls="collapseExample">BibTeX</a>
-        </p>
-        <div class="collapse" id="abstractarmagency">
-          <div class="card card-body">
-            <blockquote class="blockquote">
-              Gig platforms must coordinate flexible workforces they cannot command. Workers may accept or reject job offers, and their performance improves through learning-by-doing. These features create a central operational tension: platforms must meet current demand while also developing future workforce capability. We study this problem in a model where the platform recommends each job to a batch of workers, workers accept stochastically based on current skill, and assigned workers improve through experience along heterogeneous learning curves with unknown potential. We first show that the fully optimal dynamic policy is computationally intractable and too demanding to serve as a practical benchmark for online learning. We therefore introduce a tractable dynamic clairvoyant benchmark, the finite-horizon planning oracle (FHPO), which anticipates workers' hidden potential and  evaluates them using an index that interpolates between their current quality and long-run potential. Then we develop OUCB, an optimistic learning algorithm that balances exploration and exploition, which achieves sublinear regret with respect to this robust clairvoyant benchmark. And we also design SafeOUCB, adding explicit control of market-failure risk. Using data from a major U.S. retail delivery platform covering 1.2 million completed jobs and 5,386 workers, we document pronounced learning curves, substantial heterogeneity in worker potential, and systematic differences in how acceptance changes with skill. In calibrated counterfactual experiments, learning-aware dispatch improves cumulative platform utility by 2--3\% relative to an empirical myopic benchmark while concentrating work among systematically higher-quality workers and maintaining low market-failure rates.
-            </blockquote>
-          </div>
-        </div>
-                <div class="collapse" id="bibarmagency">
-          <div class="card card-body">
-            <blockquote class="blockquote">
-             @article{deng2026learning,
-  title={Learning to Gig: Workforce Development under Worker Agency},
-  author={Deng, Haonan and Jiang, Shunan and Qu, Xinpeng and Sinchaisri, Wichinpong Park},
-  journal={Available at SSRN 5387320},
   year={2026}}
             </blockquote>
           </div>
