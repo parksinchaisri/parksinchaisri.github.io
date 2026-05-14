@@ -127,6 +127,79 @@
   .tag.lead {
     background-color: #c0392b; /* Dark red */
   }
+
+  .bibtex-card {
+  margin-top: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.035);
+  padding: 14px 16px;
+  box-shadow: none;
+}
+
+.bibtex-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #b8b8b8;
+}
+
+.bibtex-copied {
+  display: none;
+  color: #a6e22e;
+  font-weight: 600;
+}
+
+.bibtex-copied.show {
+  display: inline;
+}
+
+pre.bibtex-code {
+  margin: 0;
+  padding: 16px 18px;
+  background: #2f3129;
+  color: #e8e8e8;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 15px;
+  line-height: 1.45;
+  box-shadow: none;
+}
+
+/* @article */
+.bib-entrytype {
+  color: #66d9ef;
+  font-weight: 700;
+}
+
+/* allon2023impact */
+.bib-key {
+  color: #a6e22e;
+  font-weight: 700;
+}
+
+/* title, author, journal, etc. */
+.bib-field {
+  color: #ff6f91;
+  font-weight: 700;
+}
+
+/* = and braces */
+.bib-equals,
+.bib-delim,
+.bib-punctuation {
+  color: #eeeeee;
+}
+
+/* actual BibTeX values */
+.bib-value {
+  color: #ffe082;
+}
+
   </style>
 
   <script>
@@ -420,7 +493,16 @@
           <a class="btn btn-default" data-toggle="collapse" href="#abstractblock" role="button" aria-expanded="false" aria-controls="collapseExample">abstract</a>
           <a href="https://doi.org/10.1371/journal.pone.0257530" class="btn btn-default" target="_blank" role="button">Paper</a>
           <a href="files/paper-blockparty.pdf" class="btn btn-default" target="_blank" role="button">PDF</a>
-          <a class="btn btn-default" data-toggle="collapse" href="#bibblock" role="button" aria-expanded="false" aria-controls="collapseExample">BibTeX</a>
+         <a class="btn btn-default bibtex-copy-btn"
+   data-toggle="collapse"
+   href="#bibblock"
+   role="button"
+   aria-expanded="false"
+   aria-controls="bibblock"
+   data-bib-source="bibblock-raw"
+   data-bib-status="bibblock-status">
+   BibTeX
+</a>
         </p>
         <div class="collapse" id="abstractblock">
           <div class="card card-body">
@@ -457,12 +539,19 @@
         <br> <i class="fas fa-award"></i><a class="lowkey"> Finalist, POMS CBOM Junior Scholar Paper Competition, 2020</a>
         <br> <i class="fas fa-award"></i><a class="lowkey"> Winner, Baker Retailing Center Research Grant, 2018</a>
         </p>
-        <p>
-          <a class="btn btn-default" data-toggle="collapse" href="#abstractgig" role="button" aria-expanded="false" aria-controls="collapseExample">abstract</a>
-          <a href="https://pubsonline.informs.org/doi/abs/10.1287/msom.2023.1191" class="btn btn-default" target="_blank" role="button">Paper</a>
-          <a href="files/paper-gigdrivers.pdf" class="btn btn-default" target="_blank" role="button">PDF</a>
-          <a class="btn btn-default" data-toggle="collapse" href="#bibgig" role="button" aria-expanded="false" aria-controls="collapseExample">BibTeX</a>
-        </p>
+       <p>
+  <a class="btn btn-default" data-toggle="collapse" href="#abstractgig" role="button" aria-expanded="false" aria-controls="abstractgig">abstract</a>
+  <a href="https://pubsonline.informs.org/doi/abs/10.1287/msom.2023.1191" class="btn btn-default" target="_blank" role="button">Paper</a>
+  <a href="files/paper-gigdrivers.pdf" class="btn btn-default" target="_blank" role="button">PDF</a>
+  <a class="btn btn-default bibtex-copy-btn"
+     data-toggle="collapse"
+     href="#bibgig"
+     role="button"
+     aria-expanded="false"
+     aria-controls="bibgig"
+     data-bib-source="bibgig-raw"
+     data-bib-status="bibgig-status">BibTeX</a>
+</p>
         <div class="collapse" id="abstractgig">
           <div class="card card-body">
             <blockquote class="blockquote">
@@ -470,10 +559,16 @@
             </blockquote>
           </div>
         </div>
-        <div class="collapse" id="bibgig">
-          <div class="card card-body">
-            <blockquote class="blockquote">
-              @article{allon2023impact,
+      <div class="collapse" id="bibgig">
+  <div class="bibtex-card">
+    <div class="bibtex-toolbar">
+      <span>BibTeX</span>
+      <span id="bibgig-status" class="bibtex-copied">Copied!</span>
+    </div>
+
+    <pre class="bibtex-code" data-bib-source="bibgig-raw"></pre>
+
+    <script type="text/plain" id="bibgig-raw">@article{allon2023impact,
   title={The impact of behavioral and economic drivers on gig economy workers},
   author={Allon, Gad and Cohen, Maxime C and Sinchaisri, Wichinpong Park},
   journal={Manufacturing \& Service Operations Management},
@@ -481,10 +576,10 @@
   number={4},
   pages={1376--1393},
   year={2023},
-  publisher={INFORMS}}
-            </blockquote>
-          </div>
-        </div>
+  publisher={INFORMS}
+}</script>
+  </div>
+</div>
 
 
 
@@ -635,7 +730,10 @@
           <div class="card card-body">
             <blockquote class="blockquote">
              @article{blaettchen2026precise,
-  title={Precise or Broad? Designing Algorithmic Advice for Learning in Sequential Decision Making}, author={Blaettchen, Philippe and Sinchaisri, Wichinpong Park}, journal={Working Paper}, year={2026}}
+title={Precise or Broad? Designing Algorithmic Advice for Learning in Sequential Decision Making}, 
+author={Blaettchen, Philippe and Sinchaisri, Wichinpong Park},
+journal={Working Paper}, 
+year={2026}}
             </blockquote>
           </div>
         </div>
@@ -650,7 +748,7 @@
         <p>
           <a class="btn btn-default" data-toggle="collapse" href="#abstractpq" role="button" aria-expanded="false" aria-controls="collapseExample">abstract</a>
           <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3634129" class="btn btn-default" target="_blank" role="button">SSRN [Sep 2020]</a>
-          <a class="btn btn-default" data-toggle="collapse" href="#biboq" role="button" aria-expanded="false" aria-controls="collapseExample">BibTeX</a>
+          <a class="btn btn-default" data-toggle="collapse" href="#bibpq" role="button" aria-expanded="false" aria-controls="collapseExample">BibTeX</a>
         </p>
         <div class="collapse" id="abstractpq">
           <div class="card card-body">
@@ -659,10 +757,14 @@
             </blockquote>
           </div>
         </div>
-                <div class="collapse" id="bibpq">
+      <div class="collapse" id="bibpq">
           <div class="card card-body">
             <blockquote class="blockquote">
-              @article{hariss2020markdown, title={Markdown pricing with quality perception}, author={Hariss, Rim and Perakis, Georgia and Sinchaisri, Wichinpong Park and Zheng, Yanchong}, journal={Available at SSRN 3634129}, year={2020}}
+              @article{hariss2020markdown, 
+title={Markdown pricing with quality perception}, 
+author={Hariss, Rim and Perakis, Georgia and Sinchaisri, Wichinpong Park and Zheng, Yanchong}, 
+journal={Available at SSRN 3634129}, 
+year={2020}}
             </blockquote>
           </div>
         </div>
@@ -816,7 +918,11 @@
                 <div class="collapse" id="bibnonadoption">
           <div class="card card-body">
             <blockquote class="blockquote">
-              @article{lee2026understanding, title={Understanding Non-Adoption of "Optimal" Algorithmic Advice for Problem Solving}, author={Lee, David and Sinchaisri, Wichinpong Park}, journal={Working Paper}, year={2025}}
+              @article{lee2026understanding, 
+title={Understanding Non-Adoption of "Optimal" Algorithmic Advice for Problem Solving}, 
+author={Lee, David and Sinchaisri, Wichinpong Park}, 
+journal={Working Paper}, 
+year={2025}}
             </blockquote>
           </div>
         </div>
@@ -828,7 +934,7 @@
         <br>
 
         <a class="anchor" id="bryce"></a>
-        <h4>Managing Competitive Multi-agent Environments with Recommendation Algorithms </h4>
+        <h4>Managing Human Agents with Compliance-Aware Reinforcement Learning </h4>
         with <a class="hidelink" target="_blank" href="https://www.bhmclaughlin.com/">Bryce McLaughlin</a>
         <p><br></p>
 
@@ -1459,6 +1565,198 @@
 
       setView(isFull, { persistDetected: true });
     })();
+  })();
+</script>
+
+
+<script>
+  (function () {
+    function escapeHtml(text) {
+      return String(text || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+    }
+
+    function highlightBibValue(rawValue) {
+      var value = String(rawValue || "").trim();
+      var first = value.charAt(0);
+      var last = value.charAt(value.length - 1);
+
+      if ((first === "{" && last === "}") || (first === '"' && last === '"')) {
+        return '<span class="bib-delim">' + escapeHtml(first) + '</span>' +
+               '<span class="bib-value">' + escapeHtml(value.slice(1, -1)) + '</span>' +
+               '<span class="bib-delim">' + escapeHtml(last) + '</span>';
+      }
+
+      return '<span class="bib-value">' + escapeHtml(value) + '</span>';
+    }
+
+    function highlightBibLine(line) {
+      var entryMatch = line.match(/^(\s*)(@\w+)\s*\{\s*([^,]+)(,?)(.*)$/);
+      if (entryMatch) {
+        return escapeHtml(entryMatch[1]) +
+               '<span class="bib-entrytype">' + escapeHtml(entryMatch[2]) + '</span>' +
+               '<span class="bib-delim">{</span>' +
+               '<span class="bib-key">' + escapeHtml(entryMatch[3]) + '</span>' +
+               '<span class="bib-punctuation">' + escapeHtml(entryMatch[4]) + '</span>' +
+               escapeHtml(entryMatch[5]);
+      }
+
+      var fieldMatch = line.match(/^(\s*)([A-Za-z][A-Za-z0-9_-]*)\s*=\s*(.*?)(,?)\s*$/);
+      if (fieldMatch) {
+        return escapeHtml(fieldMatch[1]) +
+               '<span class="bib-field">' + escapeHtml(fieldMatch[2]) + '</span>' +
+               '<span class="bib-equals">=</span>' +
+               highlightBibValue(fieldMatch[3]) +
+               '<span class="bib-punctuation">' + escapeHtml(fieldMatch[4]) + '</span>';
+      }
+
+      if (line.trim() === "}") {
+        return '<span class="bib-delim">}</span>';
+      }
+
+      return escapeHtml(line);
+    }
+
+    function highlightBibTeX(raw) {
+      return String(raw || "")
+        .trim()
+        .split("\n")
+        .map(highlightBibLine)
+        .join("\n");
+    }
+
+    function getRawBibFromCollapse(collapse) {
+      if (!collapse) return "";
+
+      var rawScript = collapse.querySelector('script[type="text/plain"]');
+      if (rawScript) return rawScript.textContent.trim();
+
+      var rawPre = collapse.querySelector("pre.bibtex-code");
+      if (rawPre) {
+        return rawPre.getAttribute("data-raw-bibtex") || rawPre.textContent.trim();
+      }
+
+      var blockquote = collapse.querySelector("blockquote");
+      if (blockquote) return blockquote.textContent.trim();
+
+      return collapse.textContent.trim();
+    }
+
+    function renderBibCollapse(collapse) {
+      if (!collapse || !collapse.id) return;
+
+      var raw = getRawBibFromCollapse(collapse);
+      if (!raw || raw.indexOf("@") === -1) return;
+
+      var statusId = collapse.id + "-status";
+
+      collapse.innerHTML =
+        '<div class="bibtex-card">' +
+          '<div class="bibtex-toolbar">' +
+            '<span>BibTeX</span>' +
+            '<span id="' + escapeHtml(statusId) + '" class="bibtex-copied">Copied!</span>' +
+          '</div>' +
+          '<pre class="bibtex-code" data-raw-bibtex="' + escapeHtml(raw) + '">' +
+            highlightBibTeX(raw) +
+          '</pre>' +
+        '</div>';
+    }
+
+    function renderAllBibTeX() {
+      var bibCollapses = document.querySelectorAll('.collapse[id^="bib"]');
+
+      bibCollapses.forEach(function (collapse) {
+        renderBibCollapse(collapse);
+      });
+
+      var bibButtons = document.querySelectorAll('a[data-toggle="collapse"][href^="#bib"]');
+
+      bibButtons.forEach(function (button) {
+        var targetId = button.getAttribute("href").replace("#", "");
+        if (!targetId) return;
+
+        button.classList.add("bibtex-copy-btn");
+        button.setAttribute("data-bib-target", targetId);
+        button.setAttribute("aria-controls", targetId);
+      });
+    }
+
+    function fallbackCopy(text) {
+      var textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.setAttribute("readonly", "");
+      textarea.style.position = "absolute";
+      textarea.style.left = "-9999px";
+      document.body.appendChild(textarea);
+      textarea.select();
+
+      try {
+        document.execCommand("copy");
+      } catch (err) {}
+
+      document.body.removeChild(textarea);
+    }
+
+    function showCopiedStatus(statusId) {
+      var status = document.getElementById(statusId);
+      if (!status) return;
+
+      status.classList.add("show");
+
+      window.setTimeout(function () {
+        status.classList.remove("show");
+      }, 1800);
+    }
+
+    function copyText(text, statusId) {
+      if (!text) return;
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(function () {
+          showCopiedStatus(statusId);
+        }).catch(function () {
+          fallbackCopy(text);
+          showCopiedStatus(statusId);
+        });
+      } else {
+        fallbackCopy(text);
+        showCopiedStatus(statusId);
+      }
+    }
+
+    function copyBibTeXFromButton(button) {
+      var targetId = button.getAttribute("data-bib-target");
+
+      if (!targetId) {
+        var href = button.getAttribute("href") || "";
+        if (href.charAt(0) === "#") targetId = href.slice(1);
+      }
+
+      var collapse = document.getElementById(targetId);
+      if (!collapse) return;
+
+      var code = collapse.querySelector("pre.bibtex-code");
+      var raw = code
+        ? code.getAttribute("data-raw-bibtex")
+        : getRawBibFromCollapse(collapse);
+
+      copyText(raw, targetId + "-status");
+    }
+
+    document.addEventListener("click", function (event) {
+      var button = event.target.closest(".bibtex-copy-btn, a[data-toggle='collapse'][href^='#bib']");
+      if (!button) return;
+
+      copyBibTeXFromButton(button);
+    });
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", renderAllBibTeX);
+    } else {
+      renderAllBibTeX();
+    }
   })();
 </script>
 
